@@ -1,0 +1,25 @@
+
+<div class="container">
+    <app-employee-count [all]="getAllEmployeesCount()"
+                        [male]="getMaleEmployeesCount()"
+                        [female]="getFemaleEmployeesCount()"></app-employee-count>
+  <table class="table table-bordered">
+    <tr>
+    <th>Code</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Salary</th>
+    <th>DOB</th>
+  </tr>
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{emp.code}}</td>
+      <td>{{emp.name}}</td>
+      <td>{{emp.gender}}</td>
+      <td>{{emp.annualSalary}}</td>
+      <td>{{emp.dateOfBirth}}</td>
+      
+    </tr>
+  </tbody>
+  </table><angular2csv [data]="employees" filename="test.csv" [options]="options"></angular2csv>
+</div>

@@ -1,0 +1,11 @@
+.navbar{
+    background: #d4d2d2;
+    border-radius: 5px;
+}
+.navbar p {
+    margin: 6px 0 10px;
+}
+ .vl {
+    border-left: 2px solid rgb(98, 119, 98);
+    height: 50px;
+  }
