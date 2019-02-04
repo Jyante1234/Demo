@@ -1,0 +1,154 @@
+{
+    "johnnieMaxTV" : [
+        {
+            "JMax_videoId":1,
+            "JMax_videoTitle":"J.Max 1",
+            "JMax_videoName": "video 1",
+            "JMax_videofor": "label",
+            "JMax_videoCoverImage": "assets/gamesImages/addition.jpg",
+            "JMax_videoUrl": "assets/video/Wildlife.mp4",
+            "colorCode": "#FF7D00"
+            
+        },
+        {
+            "JMax_videoId":2,
+            "JMax_videoTitle":"J.Max 2",
+            "JMax_videoName": "video 2",
+            "JMax_videofor": "label",
+            "JMax_videoCoverImage": "assets/gamesImages/addition.jpg",
+            "JMax_videoUrl": "assets/video/Wildlife.mp4",
+            "colorCode": "#FF7D00"
+            
+        },
+        {
+            "JMax_videoId":3,
+            "JMax_videoTitle":"J.Max 3",
+            "JMax_videoName": "video 3",
+            "JMax_videofor": "label",
+            "JMax_videoCoverImage": "assets/gamesImages/addition.jpg",
+            "JMax_videoUrl": "assets/video/Wildlife.mp4",
+            "colorCode": "#FF7D00"
+            
+        },
+        {
+            "JMax_videoId":4,
+            "JMax_videoTitle":"J.Max 4",
+            "JMax_videoName": "video 4",
+            "JMax_videofor": "label",
+            "JMax_videoCoverImage": "assets/gamesImages/addition.jpg",
+            "JMax_videoUrl": "assets/video/Wildlife.mp4",
+            "colorCode": "#FF7D00"
+            
+        },
+        {
+            "JMax_videoId":5,
+            "JMax_videoTitle":"J.Max 5",
+            "JMax_videoName": "video 5",
+            "JMax_videofor": "label",
+            "JMax_videoCoverImage": "assets/gamesImages/addition.jpg",
+            "JMax_videoUrl": "assets/video/Wildlife.mp4",
+            "colorCode": "#FF7D00"
+            
+        },
+        {
+            "JMax_videoId":6,
+            "JMax_videoTitle":"J.Max 6",
+            "JMax_videoName": "video 6",
+            "JMax_videofor": "concept",
+            "JMax_videoCoverImage": "assets/gamesImages/addition.jpg",
+            "JMax_videoUrl": "assets/video/Wildlife.mp4",
+            "colorCode": "#FFFF00"
+            
+        },
+        {
+            "JMax_videoId":7,
+            "JMax_videoTitle":"J.Max 7",
+            "JMax_videoName": "video 7",
+            "JMax_videofor": "concept",
+            "JMax_videoCoverImage": "assets/gamesImages/addition.jpg",
+            "JMax_videoUrl": "assets/video/Wildlife.mp4",
+            "colorCode": "#FFFF00"
+            
+        },
+        {
+            "JMax_videoId":8,
+            "JMax_videoTitle":"J.Max 8",
+            "JMax_videoName": "video 8",
+            "JMax_videofor": "concept",
+            "JMax_videoCoverImage": "assets/gamesImages/addition.jpg",
+            "JMax_videoUrl": "assets/video/Wildlife.mp4",
+            "colorCode": "#FFFF00"
+            
+        },
+        {
+            "JMax_videoId":9,
+            "JMax_videoTitle":"J.Max 9",
+            "JMax_videoName": "video 9",
+            "JMax_videofor": "concept",
+            "JMax_videoCoverImage": "assets/gamesImages/addition.jpg",
+            "JMax_videoUrl": "assets/video/Wildlife.mp4",
+            "colorCode": "#FFFF00"
+            
+        },
+        {
+            "JMax_videoId":10,
+            "JMax_videoTitle":"J.Max 10",
+            "JMax_videoName": "video 10",
+            "JMax_videofor": "concept",
+            "JMax_videoCoverImage": "assets/gamesImages/addition.jpg",
+            "JMax_videoUrl": "assets/video/Wildlife.mp4",
+            "colorCode": "#FFFF00"
+            
+        },
+        {
+            "JMax_videoId":11,
+            "JMax_videoTitle":"J.Max 11",
+            "JMax_videoName": "video 11",
+            "JMax_videofor": "sentence",
+            "JMax_videoCoverImage": "assets/gamesImages/addition.jpg",
+            "JMax_videoUrl": "assets/video/Wildlife.mp4",
+            "colorCode": "#348BC7"
+            
+        },
+        {
+            "JMax_videoId":12,
+            "JMax_videoTitle":"J.Max 12",
+            "JMax_videoName": "video 12",
+            "JMax_videofor": "sentence",
+            "JMax_videoCoverImage": "assets/gamesImages/addition.jpg",
+            "JMax_videoUrl": "assets/video/Wildlife.mp4",
+            "colorCode": "#348BC7"
+            
+        },
+        {
+            "JMax_videoId":13,
+            "JMax_videoTitle":"J.Max 13",
+            "JMax_videoName": "video 13",
+            "JMax_videofor": "sentence",
+            "JMax_videoCoverImage": "assets/gamesImages/addition.jpg",
+            "JMax_videoUrl": "assets/video/Wildlife.mp4",
+            "colorCode": "#348BC7"
+            
+        },
+        {
+            "JMax_videoId":14,
+            "JMax_videoTitle":"J.Max 14",
+            "JMax_videoName": "video 14",
+            "JMax_videofor": "sentence",
+            "JMax_videoCoverImage": "assets/gamesImages/addition.jpg",
+            "JMax_videoUrl": "assets/video/Wildlife.mp4",
+            "colorCode": "#348BC7"
+            
+        },
+        {
+            "JMax_videoId":15,
+            "JMax_videoTitle":"J.Max 15",
+            "JMax_videoName": "video 15",
+            "JMax_videofor": "sentence",
+            "JMax_videoCoverImage": "assets/gamesImages/addition.jpg",
+            "JMax_videoUrl": "assets/video/Wildlife.mp4",
+            "colorCode": "#348BC7"
+            
+        }
+    ]
+}

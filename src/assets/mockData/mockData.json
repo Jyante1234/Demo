@@ -1,0 +1,61 @@
+{
+    "login": [
+        {
+            "email": "mohan@orbiosolutions.com",
+            "password": "mps@123",
+            "userName": "Mohan Saginala"
+        },
+        {     
+            "email": "samrajesh.e@adi-mps.com",
+            "password": "mps@123",
+            "userName": "Sam Rajesh"
+        },
+        {
+            "email": "jamie.west@mpslimited.com",
+            "password": "mps@123",
+            "userName": "Jamie West"
+        },
+        {     
+            "email": "priya.venkat@mpslimited.com",
+            "password": "mps@123",
+            "userName": "Priya Venkat"
+        },
+        {     
+            "email": "test@mpslimited.com",
+            "password": "mps@123",
+            "userName": "Test User"
+        }
+    ],
+    "navigationForTeacher": [
+        {
+            "linkName": "eBooks",
+            "link": "/ebooks",
+            "dropdown": false,
+            "icon":"assets/images/contentIcon.png"
+        },
+        {
+            "linkName": "Classes",
+            "link": "/classes",
+            "dropdown": false,
+            "icon":"assets/images/classesIcon.png"
+        },
+        {
+            "linkName": "Resources",
+            "dropdown": false,
+            "link" : "/resources",
+            "icon":"assets/images/resourceIcon.png"
+        },
+        {
+            "linkName": "Games",
+            "link": "/games",
+            "dropdown": false,
+            "icon":"assets/images/gameIcon.png"  
+        },
+        {
+            "linkName": "Shared Space",
+            "link": "/shared-space",
+            "dropdown": false,
+            "icon":"assets/images/johnieMaxIcon.png"
+        }
+    ]
+}

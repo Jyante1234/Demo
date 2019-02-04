@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row gamesMockData">
+    <div class="gamesData" *ngFor="let mockData of gamesMockData">
+      <div class="gamesDataIn" [style.backgroundColor]="mockData.colorCode" (click)="openPopup('game'); openGame('game',mockData)">
+        <img class="img-fluid coverImage" src="{{mockData.gameIcon}}">
+        <div class="centered" *ngIf="mockData.isActive"> <i class="fas fa-lock centeredIcon"></i></div>
+        <div class="gameTitleDiv">
+        <p class="gameTitle">{{mockData.gameTitle}}</p>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

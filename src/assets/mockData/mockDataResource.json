@@ -1,0 +1,82 @@
+{
+    "resourceMockData": [
+        {
+         "name":"User Guide",
+         "type":"folder",
+         "files": [
+             {
+                 "name":"file1.txt",
+                 "type":"textFile",
+                 "iconUrl":"assets/images/word.png",
+                 "fileUrl":"assets/JJM.docx"
+             },
+             {
+                 "name":"file2.pdf",
+                 "type":"pdfFile",
+                 "iconUrl":"assets/images/pdf.png",
+                 "fileUrl":"assets/Supercow.pdf"
+             },
+             {
+                 "name":"file3.txt",
+                 "type":"textFile",
+                 "iconUrl":"assets/images/word.png",
+                 "fileUrl":"assets/JJM.docx"
+             }
+         ]
+        },
+        {
+            "name":"User Guide",
+            "type":"folder",
+            "files": [
+                {
+                    "name":"file1.pdf",
+                    "type":"pdfFile",
+                    "iconUrl":"assets/images/pdf.png",
+                    "fileUrl":"assets/Supercow.pdf"
+                },
+                {
+                    "name":"file2.txt",
+                    "type":"pdfFile",
+                    "iconUrl":"assets/images/word.png",
+                    "fileUrl":"assets/JJM.docx"
+                }
+            ]
+        },
+        {
+            "name":"User Guide",
+            "type":"folder",
+            "files": [
+                {
+                    "name":"file1.pdf",
+                    "type":"pdfFile",
+                    "iconUrl":"assets/images/pdf.png",
+                    "fileUrl":"assets/Supercow.pdf"
+                },
+                {
+                    "name":"file2.txt",
+                    "type":"pdfFile",
+                    "iconUrl":"assets/images/word.png",
+                    "fileUrl":"assets/JJM.docx"
+                }
+            ]
+        },
+        {
+            "name":"User Guide",
+            "type":"folder",
+            "files": [
+                {
+                    "name":"file1.pdf",
+                    "type":"pdfFile",
+                    "iconUrl":"assets/images/pdf.png",
+                    "fileUrl":"assets/Supercow.pdf"
+                },
+                {
+                    "name":"file2.txt",
+                    "type":"pdfFile",
+                    "iconUrl":"assets/images/word.png",
+                    "fileUrl":"assets/JJM.docx"
+                }
+            ]
+        }
+    ]
+}

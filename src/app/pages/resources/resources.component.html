@@ -1,0 +1,45 @@
+<div class="container resourceContainer">
+
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#programResource">Program Resources</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#teacherGuide"><i class="fa fa-folder" aria-hidden="true"></i>Teacher
+        Guids</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#SELLessons">SEL Lessons</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div id="programResource" class="container tab-pane active"><br>
+      <ul *ngFor="let mockData of resourceMockData">
+        <li class="listElem"><i class="fa fa-folder" aria-hidden="true"></i>
+          {{mockData.name}}
+        </li>
+        <div class="folder">
+          <ul class="files" *ngFor="let mockDataIn of mockData.files">
+            <li class="listElem" (click)="openFile(mockDataIn)">
+              <img src="{{mockDataIn.iconUrl}}" class="img-fluid fileImage"><span>&nbsp;&nbsp;</span>
+              <a href="{{mockDataIn.fileUrl}}" target="_blank" class="embed">{{mockDataIn.name}}</a>
+            </li>
+          </ul>
+        </div>
+      </ul>
+    </div>
+    <div id="teacherGuide" class="container tab-pane fade"><br>
+      <div class="folder">
+        <h3>Menu 2</h3>
+        <p>Lore Ipsum</p>
+      </div>
+    </div>
+    <div id="SELLessons" class="container tab-pane fade"><br>
+      <div class="folder">
+        <h3>Menu 3</h3>
+        <p>Lore Ipsum</p>
+      </div>
+    </div>
+  </div>
+
+</div>

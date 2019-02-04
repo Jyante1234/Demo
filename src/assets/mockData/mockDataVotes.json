@@ -1,0 +1,715 @@
+{
+  "myClassMockData": [
+    {
+      "classID": 1,
+      "class": 1,
+      "className": "Class 1",
+      "eBook": [
+        {   
+          "questionID": 1,
+          "bookType": "label",
+          "colorCode": "#FF7D00",
+          "bookName": "Mammals",
+          "question": "What is your favourite red thing from this book?",
+          "bookImage": "assets/votesImages/frog.jpg",
+          "optionNames": [
+            {
+              "optionName": "Frog",
+              "optionImage": "assets/votesImages/frog.jpg",
+              "voters": [
+                {
+                  "name": "Daven"
+                },
+                {
+                  "name": "Rajesh"
+                },
+                {
+                  "name": "Jamie W"
+                },
+                {
+                  "name": "Peter"
+                },
+                {
+                  "name": "Daven"
+                }
+              ]
+            },
+            {
+              "optionName": "Seal",
+              "optionImage": "assets/votesImages/seal.jpeg",
+              "voters": [
+                {
+                  "name": "Oralia"
+                },
+                {
+                  "name": "Robert"
+                }
+              ]
+            },
+            {
+              "optionName": "Flower",
+              "optionImage": "assets/votesImages/flower.jpg",
+              "voters": [
+                {
+                  "name": "Raju"
+                },
+                {
+                  "name": "Sam"
+                }
+              ]
+            },
+            {
+              "optionName": "Bird",
+              "optionImage": "assets/votesImages/bird.jpg",
+              "voters": [
+                {
+                  "name": "Raghav"
+                }
+              ]
+            },
+            {
+              "optionName": "Frog",
+              "optionImage": "assets/votesImages/frog.jpg",
+              "voters": [
+                {
+                  "name": "Daven"
+                },
+                {
+                  "name": "Rajesh"
+                },
+                {
+                  "name": "Jamie W"
+                },
+                {
+                  "name": "Peter"
+                },
+                {
+                  "name": "Daven"
+                }
+              ]
+            },
+            {
+              "optionName": "Frog",
+              "optionImage": "assets/votesImages/frog.jpg",
+              "voters": [
+                {
+                  "name": "Daven"
+                },
+                {
+                  "name": "Rajesh"
+                },
+                {
+                  "name": "Jamie W"
+                },
+                {
+                  "name": "Peter"
+                },
+                {
+                  "name": "Daven"
+                }
+              ]
+            },
+            {
+              "optionName": "Frog",
+              "optionImage": "assets/votesImages/frog.jpg",
+              "voters": [
+                {
+                  "name": "Daven"
+                },
+                {
+                  "name": "Rajesh"
+                },
+                {
+                  "name": "Jamie W"
+                },
+                {
+                  "name": "Peter"
+                },
+                {
+                  "name": "Daven"
+                }
+              ]
+            },
+            {
+              "optionName": "Frog",
+              "optionImage": "assets/votesImages/frog.jpg",
+              "voters": [
+                {
+                  "name": "Daven"
+                },
+                {
+                  "name": "Rajesh"
+                },
+                {
+                  "name": "Jamie W"
+                },
+                {
+                  "name": "Peter"
+                },
+                {
+                  "name": "Daven"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "questionID": 2,
+          "bookType": "concept",
+          "colorCode": "#FFFF00",
+          "bookName": "Fast and Slow",
+          "question": "What is your favourite fast thing from this book?",
+          "bookImage": "assets/votesImages/bird.jpg",
+          "optionNames": [
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            },
+            {
+              "optionName": "Triangle",
+              "optionImage": "assets/votesImages/triangle.png",
+              "voters": [
+                {
+                  "name": "Oralia"
+                }
+              ]
+            },
+            {
+              "optionName": "Circle",
+              "optionImage": "assets/votesImages/circle1.png",
+              "voters": [
+                {
+                  "name": "Raghav"
+                },
+                {
+                  "name": "Samsundar"
+                }
+              ]
+            },
+            {
+              "optionName": "Rectangle",
+              "optionImage": "assets/votesImages/rectangle.png",
+              "voters": [
+                {
+                  "name": "Raghav"
+                }
+              ]
+            },
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            },
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            },
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            },
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "questionID": 3,
+          "bookType": "sentence",
+          "colorCode": "#348BC7",
+          "bookName": "What is Red?",
+          "question": "What is your favourite animal from this book?",
+          "bookImage": "assets/votesImages/seal.jpeg",
+          "optionNames": [
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            },
+            {
+              "optionName": "Triangle",
+              "optionImage": "assets/votesImages/triangle.png",
+              "voters": [
+                {
+                  "name": "Oralia"
+                }
+              ]
+            },
+            {
+              "optionName": "Circle",
+              "optionImage": "assets/votesImages/circle1.png",
+              "voters": [
+                {
+                  "name": "Raghav"
+                },
+                {
+                  "name": "Samsundar"
+                }
+              ]
+            },
+            {
+              "optionName": "Rectangle",
+              "optionImage": "assets/votesImages/rectangle.png",
+              "voters": [
+                {
+                  "name": "Raghav"
+                }
+              ]
+            },
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            },
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            },
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            },
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    
+  ],
+  "otherClassMockData": [
+    {
+      "classID": 2,
+      "class": 2,
+      "className": "Other Class",
+      "eBook": [
+        {   
+
+          "bookType": "label",
+          "colorCode": "#FF7D00",
+          "bookName": "Mammals",
+          "question": "What is your favourite red thing from this book?",
+          "bookImage": "assets/votesImages/frog.jpg",
+          "optionNames": [
+            {
+              "optionName": "Frog",
+              "optionImage": "assets/votesImages/frog.jpg",
+              "voters": [
+                {
+                  "name": "Daven"
+                },
+                {
+                  "name": "Rajesh"
+                },
+                {
+                  "name": "Jamie W"
+                },
+                {
+                  "name": "Peter"
+                },
+                {
+                  "name": "Daven"
+                }
+              ]
+            },
+            {
+              "optionName": "Seal",
+              "optionImage": "assets/votesImages/seal.jpeg",
+              "voters": [
+                {
+                  "name": "Oralia"
+                },
+                {
+                  "name": "Robert"
+                }
+              ]
+            },
+            {
+              "optionName": "Flower",
+              "optionImage": "assets/votesImages/flower.jpg",
+              "voters": [
+                {
+                  "name": "Raju"
+                },
+                {
+                  "name": "Sam"
+                }
+              ]
+            },
+            {
+              "optionName": "Bird",
+              "optionImage": "assets/votesImages/bird.jpg",
+              "voters": [
+                {
+                  "name": "Raghav"
+                }
+              ]
+            },
+            {
+              "optionName": "Frog",
+              "optionImage": "assets/votesImages/frog.jpg",
+              "voters": [
+                {
+                  "name": "Daven"
+                },
+                {
+                  "name": "Rajesh"
+                },
+                {
+                  "name": "Jamie W"
+                },
+                {
+                  "name": "Peter"
+                },
+                {
+                  "name": "Daven"
+                }
+              ]
+            },
+            {
+              "optionName": "Frog",
+              "optionImage": "assets/votesImages/frog.jpg",
+              "voters": [
+                {
+                  "name": "Daven"
+                },
+                {
+                  "name": "Rajesh"
+                },
+                {
+                  "name": "Jamie W"
+                },
+                {
+                  "name": "Peter"
+                },
+                {
+                  "name": "Daven"
+                }
+              ]
+            },
+            {
+              "optionName": "Frog",
+              "optionImage": "assets/votesImages/frog.jpg",
+              "voters": [
+                {
+                  "name": "Daven"
+                },
+                {
+                  "name": "Rajesh"
+                },
+                {
+                  "name": "Jamie W"
+                },
+                {
+                  "name": "Peter"
+                },
+                {
+                  "name": "Daven"
+                }
+              ]
+            },
+            {
+              "optionName": "Frog",
+              "optionImage": "assets/votesImages/frog.jpg",
+              "voters": [
+                {
+                  "name": "Daven"
+                },
+                {
+                  "name": "Rajesh"
+                },
+                {
+                  "name": "Jamie W"
+                },
+                {
+                  "name": "Peter"
+                },
+                {
+                  "name": "Daven"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bookType": "concept",
+          "colorCode": "#FFFF00",
+          "bookName": "Fast and Slow",
+          "question": "What is your favourite fast thing from this book?",
+          "bookImage": "assets/votesImages/bird.jpg",
+          "optionNames": [
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            },
+            {
+              "optionName": "Triangle",
+              "optionImage": "assets/votesImages/triangle.png",
+              "voters": [
+                {
+                  "name": "Oralia"
+                }
+              ]
+            },
+            {
+              "optionName": "Circle",
+              "optionImage": "assets/votesImages/circle1.png",
+              "voters": [
+                {
+                  "name": "Raghav"
+                },
+                {
+                  "name": "Samsundar"
+                }
+              ]
+            },
+            {
+              "optionName": "Rectangle",
+              "optionImage": "assets/votesImages/rectangle.png",
+              "voters": [
+                {
+                  "name": "Raghav"
+                }
+              ]
+            },
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            },
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            },
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            },
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bookType": "sentence",
+          "colorCode": "#348BC7",
+          "bookName": "What is Red?",
+          "question": "What is your favourite animal from this book?",
+          "bookImage": "assets/votesImages/seal.jpeg",
+          "optionNames": [
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            },
+            {
+              "optionName": "Triangle",
+              "optionImage": "assets/votesImages/triangle.png",
+              "voters": [
+                {
+                  "name": "Oralia"
+                }
+              ]
+            },
+            {
+              "optionName": "Circle",
+              "optionImage": "assets/votesImages/circle1.png",
+              "voters": [
+                {
+                  "name": "Raghav"
+                },
+                {
+                  "name": "Samsundar"
+                }
+              ]
+            },
+            {
+              "optionName": "Rectangle",
+              "optionImage": "assets/votesImages/rectangle.png",
+              "voters": [
+                {
+                  "name": "Raghav"
+                }
+              ]
+            },
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            },
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            },
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            },
+            {
+              "optionName": "Square",
+              "optionImage": "assets/votesImages/square.png",
+              "voters": [
+                {
+                  "name": "Rajesh P"
+                },
+                {
+                  "name": "Jamie  W"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

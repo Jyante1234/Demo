@@ -1,0 +1,482 @@
+<div class="popupWindowBackdrop" [ngClass]="{active : popupWindow}">
+  <div class="popupWindow" [ngClass]="{'videoPopup' : videoPopup}">
+    <div class="popupWindowIn">
+      <div class="popupWindowHead">
+        <h5>{{popupName}}</h5>
+        <div class="popupHeaderIcons">
+          <a *ngIf="gameUrlShow" class="anchorTagPdfUrl col-lg-2 col-md-2" href="{{gameUrl}}" target="_blank">
+            <i class="expand fas fa-expand"></i>
+          </a>
+          <!-- <i *ngIf="videoUrlShow && !expandPopupVar" class="expand fas fa-expand" (click)="expandPopup()"></i>
+          <i *ngIf="videoUrlShow && expandPopupVar" class="expand fas fa-compress-arrows-alt" (click)="expandPopup()"></i> -->
+          <span class="popupWindowClose" (click)="closePopUp()">X</span>
+        </div>
+      </div>
+      <div class="popupWindowContent">
+
+        <app-popup-message></app-popup-message>
+        <div class="popupWindowBody" *ngIf="popupWindowBody">
+          <!--ALert start-->
+          <div class="col-12 reportConfirmation" *ngIf="classStudentAlertShow">
+            <div class="row notifiactionTable table-responsive">
+              <table class="table  table-bordered table-striped notifiactionTableIn">
+                <thead class="notificationTableHead">
+                  <tr>
+                    <th>eBooks Read</th>
+                    <th>Notification</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let mockData of mockNotification['notification']">
+                    <td>{{mockData.eBookRead}}</td>
+                    <td width="63%">{{mockData.notification}}</td>
+                    <td>{{mockData.date}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-12 reportConfirmation" *ngIf="groupStudentAlertShow">
+            <div class="row notifiactionTable table-responsive">
+              <table class="table  table-bordered table-striped notifiactionTableIn">
+                <thead class="notificationTableHead">
+                  <tr>
+                    <th>eBooks Read</th>
+                    <th>Notification</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let mockData of mockNotification['notification']">
+                    <td>{{mockData.eBookRead}}</td>
+                    <td width="63%">{{mockData.notification}}</td>
+                    <td>{{mockData.date}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!--ALert End-->
+
+          <!--Report start-->
+          <div class="showFullReport" *ngIf="classStudentReport">
+            <div class="col-12" *ngIf="progressReportShow">
+              <div class="row showParentReportIn">
+                <div class="col-lg-4 col-md-3 col-sm-3 col-3">
+                  Class:&nbsp;<select name="carlist" form="carform" id="classes" class="classSelect col-lg-10">
+                    <option value="Class 1">Class 1</option>
+                    <option value="Class 2">Class 2</option>
+                    <option value="Class 3">Class 3</option>
+                    <option value="Class 4">Class 4</option>
+                  </select>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-3 col-3">
+                  Student:&nbsp;<select name="carlist" form="carform" id="students" class="classSelect col-lg-9">
+                    <option value="All students">All students</option>
+                    <option value="Mohan Saginala">Mohan Saginala</option>
+                    <option value="Rahul">Rahul</option>
+                    <option value="Lokesh">Lokesh</option>
+                  </select>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-3 col-3">
+                  <button class="btn btn-primary w-100" (click)="openProgressReport()">Switch to Progress Report</button>
+                </div>
+              </div>
+              <div id="progressReport" class="contain tab-pan"><br>
+                <table class="table table-striped table-bordered table-responsive">
+                  <thead class="reportTableHead">
+                    <tr>
+                      <th>BookName</th>
+                      <th>Total Activities</th>
+                      <th>TotalGames</th>
+                      <th>Completed Games</th>
+                      <th>Game Score</th>
+                      <th>Time Spent</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="w-100" *ngFor="let studentBook of studentReport['assignedBooks']">
+                          {{studentBook.bookName}}
+                        </div>
+                      </td>
+                      <td>
+                        <div class="w-100">
+                          {{studentReport.bookstats.totalActivities}}
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="
+                              w-100">
+                          {{studentReport.bookstats.totalGames}}
+                        </div>
+                      </td>
+                      <td>
+                        <div class="
+                              w-100">
+                          {{studentReport.bookstats.completedGames}}
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="
+                              w-100">
+                          {{studentReport.bookstats.practiceGameScore}}
+                        </div>
+                      </td>
+                      <td>
+                        <div class="
+                              w-100">
+                          {{studentReport.bookstats.timeOnBook.min}}min
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button type="button" value="Generate Excel" class="btn btn-primary float-right" (click)="download()">Generate
+                  Excel</button>
+              </div>
+            </div>
+            <div class="col-12" *ngIf="parentReportShow">
+              <div class="row showParentReportIn">
+                <div class="col-lg-4 col-md-3 col-sm-3 col-3">
+
+                  Class: <select name="carlist" form="carform" id="classes" class="classSelect col-lg-10">
+                    <option value="Class 1">Class 1</option>
+                    <option value="Class 2">Class 2</option>
+                    <option value="Class 3">Class 3</option>
+                    <option value="Class 4">Class 4</option>
+                  </select>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-3 col-3">
+
+                  Student: <select name="carlist" form="carform" id="students" class="classSelect col-lg-9">
+                    <option value="All students">All students</option>
+                    <option value="Mohan Saginala">Mohan Saginala</option>
+                    <option value="Rahul">Rahul</option>
+                    <option value="Lokesh">Lokesh</option>
+                  </select>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-3 col-3">
+                  <button class="btn btn-primary w-100" (click)="openParentReport()">Switch to Parent Report</button>
+                </div>
+              </div>
+              <div id="parentReport" class="containe tab-pan"><br>
+                <table class="table table-striped table-bordered table-responsive">
+                  <thead class="reportTableHead">
+                    <tr>
+                      <th>BookName</th>
+                      <th>Total Activities</th>
+                      <th>TotalGames</th>
+                      <th>Completed Games</th>
+                      <th>Game Score</th>
+                      <th>Time Spent</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="w-100" *ngFor="let studentBook of studentReport['assignedBooks']">
+                          {{studentBook.bookName}}
+                        </div>
+                      </td>
+                      <!-- <td>
+                        <div class="
+                              w-100">
+                          {{studentReport.bookstats.eBooksRead}}
+                        </div>
+                      </td> -->
+                      <td>
+                        <div class="w-100">
+                          {{studentReport.bookstats.totalActivities}}
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="
+                          w-100">
+                          {{studentReport.bookstats.totalGames}}
+                        </div>
+                      </td>
+                      <td>
+                        <div class="
+                          w-100">
+                          {{studentReport.bookstats.completedGames}}
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="
+                          w-100">
+                          {{studentReport.bookstats.practiceGameScore}}
+                        </div>
+                      </td>
+                      <td>
+                        <div class="
+                          w-100">
+                          {{studentReport.bookstats.timeOnBook.min}}min
+                        </div>
+                      </td>
+
+                    </tr>
+                  </tbody>
+                </table>
+                <button type="button" value="Generate Excel" class="btn btn-primary float-right" (click)="download()">Generate
+                  Excel</button>
+              </div>
+            </div>
+          </div>
+          <!--Report End-->
+
+          <!--Class Report start-->
+          <div class="col-12 reportConfirmation" *ngIf="classReportShow">
+            <div class="row notifiactionTable table-responsive">
+              <table class="table  table-bordered table-striped notifiactionTableIn">
+                <thead class="notificationTableHead">
+                  <tr>
+                    <th>Student Name</th>
+                    <th>eBooks Read</th>
+                    <th>Comprehension Checks</th>
+                    <th>eBook Games</th>
+                    <th>Time on Book</th>
+                    <th>Practice Game Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let student of studentReport['students']">
+                    <td>
+                      <div class="w-100">
+                        {{student.firstName}} {{student.lastName}}
+                      </div>
+                    </td>
+                    <td>
+                      <div class="w-100" *ngFor="let studentBook of student['assignedBooks']">
+                        {{studentBook['bookstats'].eBooksRead}}
+                      </div>
+                    </td>
+                    <td>
+                      <div class="w-100" *ngFor="let studentBook of student['assignedBooks']">
+                        {{studentBook['bookstats'].completedActivities}}&nbsp;/&nbsp;{{studentBook['bookstats'].totalActivities}}
+                      </div>
+                    </td>
+                    <td>
+                      <div class="w-100" *ngFor="let studentBook of student['assignedBooks']">
+                        {{studentBook['bookstats'].completedGames}}&nbsp;/&nbsp;{{studentBook['bookstats'].totalGames}}
+                      </div>
+                    </td>
+                    <td>
+                      <div class="w-100" *ngFor="let studentBook of student['assignedBooks']">
+                        {{studentBook['bookstats'].timeOnBook.min}}&nbsp;:&nbsp;{{studentBook['bookstats'].timeOnBook.sec}}
+                      </div>
+                    </td>
+                    <td>
+                      <div class="w-100" *ngFor="let studentBook of student['assignedBooks']">
+                        {{studentBook['bookstats'].practiceGameScore}}
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <button type="button" value="Generate Excel" class="btn btn-primary float-right" (click)="download()">Generate
+                Excel</button>
+            </div>
+          </div>
+          <!--Class Report End-->
+
+          <!--Group Report Start-->
+          <div class="col-12 reportConfirmation" *ngIf="groupReportShow">
+            <div class="row notifiactionTable table-responsive">
+              <table class="table  table-bordered table-striped notifiactionTableIn">
+                <thead class="notificationTableHead">
+                  <tr>
+                    <th>Student Name</th>
+                    <th>Book Name</th>
+                    <th>Total Activities</th>
+                    <th>Activities Completed</th>
+                    <th>Total Games</th>
+                    <th>Completed Games</th>
+                    <th>Time Spent</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="w-100" *ngFor="let studentBook of studentReport['students']">
+                        {{studentBook.name}}
+                      </div>
+                    </td>
+                    <td>
+                      <div class="w-100" *ngFor="let mockData of studentReport['assignedBooks']">
+                        {{mockData.bookName}}
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="w-100" *ngFor="let studentBook of studentReport['students']">
+                        {{studentBook['bookstats'].totalActivities}}
+                      </div>
+                    </td>
+                    <td>
+                      <div class="w-100" *ngFor="let studentBook of studentReport['students']">
+                        {{studentBook['bookstats'].completedActivities}}
+                      </div>
+                    </td>
+                    <td>
+                      <div class="w-100" *ngFor="let studentBook of studentReport['students']">
+                        {{studentBook['bookstats'].totalGames}}
+                      </div>
+                    </td>
+                    <td>
+                      <div class="w-100" *ngFor="let studentBook of studentReport['students']">
+                        {{studentBook['bookstats'].completedGames}}
+                      </div>
+                    </td>
+                    <td>
+                      <div class="w-100" *ngFor="let studentBook of studentReport['students']">
+                        {{studentBook['bookstats']['timeOnBook'].min}}min
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <button type="button" value="Generate Excel" class="btn btn-primary float-right" (click)="download()">Generate
+                Excel</button>
+            </div>
+          </div>
+          <!--Group Report End-->
+
+          <!--Group Student Report start-->
+          <div class="showFullReport" *ngIf="groupStudentReportShow">
+            <div class="col-12" *ngIf="progressReportShow">
+              <div class="row showParentReportIn">
+                <div class="col-lg-4 col-md-3 col-sm-3 col-3">
+                  Class:&nbsp;<select name="carlist" form="carform" id="classes" class="classSelect col-lg-10">
+                    <option value="Class 1">Class 1</option>
+                    <option value="Class 2">Class 2</option>
+                    <option value="Class 3">Class 3</option>
+                    <option value="Class 4">Class 4</option>
+                  </select>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-3 col-3">
+                  Student:&nbsp;<select name="carlist" form="carform" id="students" class="classSelect col-lg-9">
+                    <option value="All students">All students</option>
+                    <option value="Mohan Saginala">Mohan Saginala</option>
+                    <option value="Rahul">Rahul</option>
+                    <option value="Lokesh">Lokesh</option>
+                  </select>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-3 col-3">
+                  <button class="btn btn-primary w-100" (click)="openProgressReport()">Switch to Progress Report</button>
+                </div>
+              </div>
+              <div id="progressReport" class="contain tab-pan"><br>
+                <table class="table table-striped table-bordered table-responsive">
+                  <thead class="reportTableHead">
+                    <tr>
+                      <th>BookID parent</th>
+                      <th>Book Name</th>
+                      <th>Book Type</th>
+                      <th>Activities Attempted</th>
+                      <th>Completed Activities</th>
+                      <th>Game Score</th>
+                      <th>Time Spent</th>
+                      <th>Total Activities</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{{studentReport.bookId}}</td>
+                      <td>{{studentReport.bookName}}</td>
+                      <td>{{studentReport.bookType}}</td>
+                      <td>{{studentReport.bookstats.activitiesAttempted}}</td>
+                      <td>{{studentReport.bookstats.completedActivities}}</td>
+                      <td>{{studentReport.bookstats.gameScore}}</td>
+                      <td>{{studentReport.bookstats.timeSpent}}</td>
+                      <td>{{studentReport.bookstats.totalActivities}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button type="button" value="Generate Excel" class="btn btn-primary float-right" (click)="download()">Generate
+                  Excel</button>
+              </div>
+            </div>
+            <div class="col-12" *ngIf="parentReportShow">
+              <div class="row showParentReportIn">
+                <div class="col-lg-4 col-md-3 col-sm-3 col-3">
+
+                  Class: <select name="carlist" form="carform" id="classes" class="classSelect col-lg-10">
+                    <option value="Class 1">Class 1</option>
+                    <option value="Class 2">Class 2</option>
+                    <option value="Class 3">Class 3</option>
+                    <option value="Class 4">Class 4</option>
+                  </select>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-3 col-3">
+
+                  Student: <select name="carlist" form="carform" id="students" class="classSelect col-lg-9">
+                    <option value="All students">All students</option>
+                    <option value="Mohan Saginala">Mohan Saginala</option>
+                    <option value="Rahul">Rahul</option>
+                    <option value="Lokesh">Lokesh</option>
+                  </select>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-3 col-3">
+                  <button class="btn btn-primary w-100" (click)="openParentReport()">Switch to Parent Report</button>
+                </div>
+              </div>
+              <div id="parentReport" class="containe tab-pan"><br>
+                <table class="table table-striped table-bordered table-responsive">
+                  <thead class="reportTableHead">
+                    <tr>
+                      <th>Book Progress</th>
+                      <th>Book Type</th>
+                      <th>Activities Attempted</th>
+                      <th>Completed Activities</th>
+                      <th>Game Score</th>
+                      <th>Time Spent</th>
+                      <th>Total Activities</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{{studentReport.bookName}}</td>
+                      <td>{{studentReport.bookType}}</td>
+                      <td>{{studentReport.bookstats.activitiesAttempted}}</td>
+                      <td>{{studentReport.bookstats.completedActivities}}</td>
+                      <td>{{studentReport.bookstats.gameScore}}</td>
+                      <td>{{studentReport.bookstats.timeSpent}}</td>
+                      <td>{{studentReport.bookstats.totalActivities}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button type="button" value="Generate Excel" class="btn btn-primary float-right" (click)="download()">Generate
+                  Excel</button>
+              </div>
+            </div>
+          </div>
+          <!--Group Student Report End-->
+
+          <!--Game Body Start-->
+          <div class="gameUrl" *ngIf="gameUrlShow" style="height: 600px">
+            <iframe [src]="transFormUrl(gameUrl)" style="width: 100%; height: 600px;"></iframe>
+          </div>
+          <!--Game Body End-->
+
+          <!--Video Start-->
+          <div class="videoPlayer" *ngIf="videoUrlShow">
+            <video width="640" height="360" controls autoplay disablepictureinpicture controlsList="nodownload">
+              <source src="https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+              Your browser does not support the video.
+            </video>
+          </div>
+          <!--Video End-->
+          
+        </div>
+      </div>
+    </div>
+  </div>

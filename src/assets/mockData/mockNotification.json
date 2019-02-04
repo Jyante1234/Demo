@@ -1,0 +1,52 @@
+{
+    "status": 200,
+    "message": "success",
+    "notification": [
+        {
+            "eBookRead": "Concept",
+            "notification": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+            "date": "05-21-2018"
+        },
+        {
+            "eBookRead": "Concept",
+            "notification": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+            "date": "05-21-2018"
+        },
+        {
+            "eBookRead": "Concept",
+            "notification": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+            "date": "05-21-2018"
+        },
+        {
+            "eBookRead": "Concept",
+            "notification": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+            "date": "05-21-2018"
+        },
+        {
+            "eBookRead": "Concept",
+            "notification": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+            "date": "05-21-2018"
+        },
+        {
+            "eBookRead": "Concept",
+            "notification": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+            "date": "05-21-2018"
+        },
+        {
+            "eBookRead": "Concept",
+            "notification": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+            "date": "05-21-2018"
+        },
+        {
+            "eBookRead": "Concept",
+            "notification": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+            "date": "05-21-2018"
+        },
+        {
+            "eBookRead": "Concept",
+            "notification": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+            "date": "05-21-2018"
+        }
+
+    ]
+}

@@ -1,0 +1,27 @@
+.container-fluid {
+    margin-top: -40px;
+}
+.outer-div {
+    padding-bottom: 1em;
+    padding-left: 0em;
+}
+.carousel {
+    border: 2px solid #4791D0;
+}
+.row .rightSection .welcome {
+    margin-bottom: 14px;
+    text-align: center;
+}
+.outer-div .outer-row {
+    align-content: flex-end;
+    align-items: flex-end;
+}
+.outer-div .outer-row .outer-rowIn{
+    align-content: flex-end;
+    align-items: flex-end;
+}
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}

@@ -1,0 +1,49 @@
+<div class="col-12 bookshelf-outer" *ngIf="eBookShow">
+  <div class="bookshelfRow row ">
+    <div class="bookType col-12">
+      <div class="row bookTypeIn">
+
+        <div class="checkBoxes ">
+          <mat-checkbox class="label " [checked]="checked" (change)="bookFilter($event)" value="label">Label</mat-checkbox>
+        </div>
+        <div class="checkBoxes ">
+          <mat-checkbox class="concept" [checked]="checked" (change)="bookFilter($event)" value="concept">Concept</mat-checkbox>
+        </div>
+        <div class="checkBoxes ">
+          <mat-checkbox class="sentence" [checked]="checked" (change)="bookFilter($event)" value="sentence">Sentence</mat-checkbox>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 books-outer">
+      <div class="row books">
+        <div class="bookshelf" *ngFor="let bookData of allBooks; let i = index">
+          <div class="row bookshelfIn">
+            <div class="outer-image">
+              <a href="{{bookData.pdfUrl}}" target="_blank">
+                <img src="{{bookData.bookCoverImageUrl}}" class="book-img img-fluid" title="{{bookData.bookType}}" alt="{{bookData.bookName}}"
+                  data-toggle="tooltip" data-placement="bottom"></a>
+            </div>
+            <div class="welcomeMessage ">
+              <h2 class="welcomeMessageIn" [style.backgroundColor]="bookData.colorCode">{{bookData.bookName}}</h2>
+              <h2 class="welcomeMessageDesc welcomeMessageOnHover">{{bookData.fictionLabel}}</h2>
+              <div class="showHoverEffect box2 sb9" [style.z-index]="bookData.sequenceNo - 1">
+                <div class="hoverEffectHeader row" [style.backgroundColor]="bookData.colorCode">
+                  <span class="hoverHeaderText col-lg-10 col-md-10">The Adventures of Johnny Max</span>
+                  <a class="anchorTagPdfUrl col-lg-2 col-md-2" href="{{bookData.pdfUrl}}" target="_blank">
+                    <i class="expand fas fa-expand-arrows-alt"></i>
+                  </a>
+
+                </div>
+                <div class="hoverEffectBody">
+                  <div class="row hoverEffectBodyIn">
+                    <span class="col-lg-8 col-md-8 hoverBodyText">{{bookData.bookTitle}}</span>
+                    <img src="assets/images/loginPageLogo.png" class="img-fluid hoverEffectBodyImage">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

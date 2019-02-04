@@ -1,0 +1,208 @@
+<div class="buildClass">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-4">
+        <div class="row">
+          <div class="classManagementClass w-100">
+            <div class="classManagementClassIn w-100">
+              <form #addClassForm="ngForm" (ngSubmit)="addResource('class', addClassForm, addClassForm.value)"
+                autocomplete="off" class="classManagementForms">
+                <input name="classNameInput" #classNameInput="ngModel" [(ngModel)]="addClassForm.classNameInput" type="text"
+                  class="form-control" placeholder="Add Class">
+                <button class="btn" type="submit">add class</button>
+              </form>
+              <div id="classesCollapse" class="classesCollapse w-100">
+                <div *ngFor="let class of classes; let i = index" class="card">
+                  <div class="card-header classListClass">
+                    <a #changeClassNameShow class="card-link col-8" [class.d-none]="cch == i" data-toggle="collapse"
+                      href="#class{{class.classId}}">
+                      <i _ngcontent-c5="" class="fas fa-users"></i>
+                      <span>{{class.name}}</span>
+                    </a>
+                    <form class="col-8 changeClassNameForm d-none" [class.d-block]="cch == i" #changeClassNameForm="ngForm"
+                      (ngSubmit)="nameManagement('class', i, changeClassNameForm.value); cch = '-1'" autocomplete="off">
+                      <input type="text" name="newClassName" #newClassName="ngModel" ngModel="{{class.name}}">
+                    </form>
+                    <div class="changeClassNameToggler">
+                      <span [class.d-none]="cch == i" (click)="cch = i"><i class="fas fa-pencil-alt"></i></span>
+                      <span class="d-none" [class.d-block]="cch == i" (click)="cch = '-1'"><i class="fas fa-times"></i></span>
+                      <span (click)="deleteManagement('class', i)"><i class="fas fa-trash-alt"></i></span>
+                    </div>
+                  </div>
+                  <div id="class{{class.classId}}" class="collapse" data-parent="#classesCollapse">
+                    <div class="card-body">
+                      <p>Drag Groups here</p>
+                      <div cdkDropList id="classesCollapseList_{{class.classId}}" class="classList w-100"
+                        [cdkDropListData]="groups" [cdkDropListConnectedTo]="groupsCollapseList" (cdkDropListDropped)="classManagement('class', $event, i)">
+                        <div class="col-12 card" *ngFor="let group of class['groups']; let j = index;" cdkDrag
+                          cdkDragLockAxis="y">
+                          <div class="card-header groupListGroup w-100">
+                            <a class="card-link w-100" [class.d-none]="cgch == j" data-toggle="collapse" href="#class{{group.groupId}}">
+                              <i _ngcontent-c5="" class="fas fa-users"></i>
+                              <span>{{group.name}}</span>
+                            </a>
+                            <form class="col-8 changeGroupNameForm d-none" [class.d-block]="cgch == j"
+                              #changeGroupNameForm="ngForm" (ngSubmit)="nameManagement('group', group.groupId, changeGroupNameForm.value); cgch = '-1'"
+                              autocomplete="off">
+                              <input type="text" name="newGroupName" #newGroupName="ngModel" ngModel="{{group.name}}">
+                            </form>
+                            <div class="changeClassNameToggler">
+                              <span [class.d-none]="cgch == j" (click)="cgch = j"><i class="fas fa-pencil-alt"></i></span>
+                              <span class="d-none" [class.d-block]="cgch == j" (click)="cgch = '-1'"><i class="fas fa-times"></i></span>
+                              <span (click)="removeManagement('group', i, j)"><i class="fas fa-trash-alt"></i></span>
+                            </div>
+                          </div>
+                          <div id="class{{group.groupId}}" class="collapse" [attr.data-parent]="'#classesCollapseList_' + class.classId">
+                            <div class="card-body">
+                              <ul class="list-unstyled">
+                                <li class="studentListStudent" *ngFor="let student of group['students']; let l = index;">
+                                  <div class="col-8 studentNameShow" [class.d-none]="csgh == l">
+                                    <img class="avatar" src="{{student.avatar}}">
+                                    <span class="studentName">{{student.firstName}} {{student.lastName}} </span>
+                                  </div>
+                                  <form class="col-8 changeStudentNameForm d-none" [class.d-block]="csgh == l"
+                                    #changeStudentNameForm="ngForm" (ngSubmit)="nameManagement('student', student.studentId, changeStudentNameForm.value); csgh = '-1'"
+                                    autocomplete="off">
+                                    <input type="text" name="newStudentName" #newGroupName="ngModel" ngModel="{{student.firstName}} {{student.lastName}} ">
+                                  </form>
+                                  <div class="changeStudentNameToggler">
+                                    <span [class.d-none]="csgh == l" (click)="csgh = l"><i class="fas fa-pencil-alt"></i></span>
+                                    <span class="d-none" [class.d-block]="csgh == l" (click)="csgh = '-1'"><i class="fas fa-times"></i></span>
+                                    <span (click)="removeManagement('studentGroup', group.groupId, l)"><i class="fas fa-trash-alt"></i></span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="collapseIndicator"></div>
+                        </div>
+                      </div>
+                      <p>Drag Students here</p>
+                      <div cdkDropList id="studentsClassCollapseList_{{class.classId}}" class="classList w-100"
+                        [cdkDropListData]="class['students']" [cdkDropListConnectedTo]="['studentsCollapse']"
+                        (cdkDropListDropped)="classManagement('student', $event, i)">
+                        <div class="col-12 studentListStudent" *ngFor="let student of class['students']; let k = index;"
+                          cdkDrag cdkDragLockAxis="y">
+                          <div class="col-8 studentNameShow" [class.d-none]="csch == k">
+                            <img class="avatar" src="{{student.avatar}}">
+                            <span class="studentName">{{student.firstName}} {{student.lastName}} </span>
+                          </div>
+                          <form class="col-8 changeStudentNameForm d-none" [class.d-block]="csch == k"
+                            #changeStudentNameForm="ngForm" (ngSubmit)="nameManagement('student', student.studentId, changeStudentNameForm.value); csch = '-1'"
+                            autocomplete="off">
+                            <input type="text" name="newStudentName" #newGroupName="ngModel" ngModel="{{student.firstName}} {{student.lastName}} ">
+                          </form>
+                          <div class="changeStudentNameToggler">
+                            <span [class.d-none]="csch == k" (click)="csch = k"><i class="fas fa-pencil-alt"></i></span>
+                            <span class="d-none" [class.d-block]="csch == k" (click)="csch = '-1'"><i class="fas fa-times"></i></span>
+                            <span (click)="removeManagement('studentClass', i, k)"><i class="fas fa-trash-alt"></i></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collapseIndicator"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="row">
+          <div class="classManagementGroup w-100">
+            <div class="classManagementGroupIn w-100">
+              <form #addGroupForm="ngForm" (ngSubmit)="addResource('group', addGroupForm, addGroupForm.value)"
+                autocomplete="off" class="classManagementForms">
+                <input name="groupNameInput" #groupNameInput="ngModel" [(ngModel)]="addGroupForm.groupNameInput" type="text"
+                  class="form-control" placeholder="Add Group">
+                <button class="btn" type="submit">add group</button>
+              </form>
+              <div class="w-100" cdkDropList [cdkDropListData]="groups" [cdkDropListConnectedTo]="classesCollapseList">
+                <div id="groupsCollapse" class="groupList w-100">
+                  <div id="{{group.groupId}}" class="col-12 card" *ngFor="let group of groups; let j = index;" cdkDrag>
+                    <div class="card-header groupListGroup w-100">
+                      <a #changeGroupNameShow class="card-link col-8" [class.d-none]="gch == j" data-toggle="collapse"
+                        href="#group{{group.groupId}}">
+                        <i _ngcontent-c5="" class="fas fa-users"></i>
+                        <span>{{group.name}}</span>
+                      </a>
+                      <form class="col-8 changeGroupNameForm d-none" [class.d-block]="gch == j" #changeGroupNameForm="ngForm"
+                        (ngSubmit)="nameManagement('group', group.groupId, changeGroupNameForm.value); gch = '-1'"
+                        autocomplete="off">
+                        <input type="text" name="newGroupName" #newGroupName="ngModel" ngModel="{{group.name}}">
+                      </form>
+                      <div class="changeClassNameToggler">
+                        <span [class.d-none]="gch == j" (click)="gch = j"><i class="fas fa-pencil-alt"></i></span>
+                        <span class="d-none" [class.d-block]="gch == j" (click)="gch = '-1'"><i class="fas fa-times"></i></span>
+                        <span (click)="deleteManagement('group', j)"><i class="fas fa-trash-alt"></i></span>
+                      </div>
+                    </div>
+                    <div id="group{{group.groupId}}" class="collapse" data-parent="#groupsCollapse">
+                      <div class="card-body">
+                        <div id="groupsCollapseList_{{group.groupId}}" cdkDropList class="groupStudentList"
+                          (cdkDropListDropped)="classManagement('group', $event, j)" [cdkDropListConnectedTo]="studentsCollapseList">
+                          <div class="studentListStudent" *ngFor="let student of group['students']; let k = index;"
+                            cdkDrag cdkDragLockAxis="y">
+                            <div class="col-8 studentNameShow" [class.d-none]="gsch == k">
+                              <img class="avatar" src="{{student.avatar}}">
+                              <span class="studentName">{{student.firstName}} {{student.lastName}} </span>
+                            </div>
+                            <form class="col-8 changeStudentNameForm d-none" [class.d-block]="gsch == k"
+                              #changeStudentNameForm="ngForm" (ngSubmit)="nameManagement('student', student.studentId, changeStudentNameForm.value); gsch = '-1'"
+                              autocomplete="off">
+                              <input type="text" name="newStudentName" #newGroupName="ngModel" ngModel="{{student.firstName}} {{student.lastName}} ">
+                            </form>
+                            <div class="changeStudentNameToggler">
+                              <span [class.d-none]="gsch == k" (click)="gsch = k"><i class="fas fa-pencil-alt"></i></span>
+                              <span class="d-none" [class.d-block]="gsch == k" (click)="gsch = '-1'"><i class="fas fa-times"></i></span>
+                              <span (click)="removeManagement('studentGroup', group.groupId, k)"><i class="fas fa-trash-alt"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="collapseIndicator"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="row">
+          <div class="classManagementStudent w-100">
+            <div class="classManagementStudentIn w-100">
+              <div class="classManagementForms">
+                <input type="search" class="form-control" placeholder="Search Student" [(ngModel)] = "abc">
+                <button class="btn" (click)="openPopup('addStudents')">add student</button>
+              </div>
+              <div id="studentsCollapse" class="w-100" cdkDropList [cdkDropListData]="students"
+                [cdkDropListConnectedTo]="studentsCollapseList">
+                <div class="studentList">
+                  <div class="studentListStudent" *ngFor="let student of students | bookFilter : abc; let j = index;" cdkDrag>
+                    <div class="col-8 studentNameShow" [class.d-none]="sch == j">
+                      <img class="avatar" src="{{student.avatar}}">
+                      <span class="studentName">{{student.firstName}} {{student.lastName}}</span>
+                    </div>
+                    <form class="col-8 changeStudentNameForm d-none" [class.d-block]="sch == j" #changeStudentNameForm="ngForm"
+                      (ngSubmit)="nameManagement('student', student.studentId, changeStudentNameForm.value); sch = '-1'"
+                      autocomplete="off">
+                      <input type="text" name="newStudentName" #newGroupName="ngModel" ngModel="{{student.firstName}} {{student.lastName}} ">
+                    </form>
+                    <div class="changeStudentNameToggler">
+                      <span [class.d-none]="sch == j" (click)="sch = j"><i class="fas fa-pencil-alt"></i></span>
+                      <span class="d-none" [class.d-block]="sch == j" (click)="sch = '-1'"><i class="fas fa-times"></i></span>
+                      <span (click)="deleteManagement('student', j)"><i class="fas fa-trash-alt"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

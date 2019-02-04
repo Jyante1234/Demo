@@ -1,0 +1,248 @@
+*:focus {
+    outline: none !important;
+}
+button:focus {
+    outline: none;
+}
+a {
+  
+    text-decoration: none;
+}
+
+div.popupWindow.fullscreen {
+    max-width: 100vw !important;
+    height: 90vh !important;
+}
+.popupWindowBackdrop{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    .popupWindow{
+        width: 100%;
+        max-width: 60vw;
+        min-height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+        z-index: 999;
+        overflow: auto;
+        background: #ffffff;
+        border: 1px solid #348DC9;
+        display: -webkit-flex;
+        display: flex;
+        height: 90%;
+        .popupWindowIn{
+            width: 100%;
+            .popupWindowHead{
+                padding: 10px;
+                display: -webkit-flex;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 16px;
+                background: #348DC9;
+                color: #ffffff;
+                .popupWindowClose{
+                    cursor: pointer;
+                }
+            }
+            .popupWindowContent{
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+            .popupWindowBody{
+                padding: 10px;
+                background: #ffffff;             
+                max-height: 500px;
+                overflow: auto;
+            }
+        }
+        &.videoPopup{
+            width: 661px;
+            height: 450px;
+            overflow: hidden;
+        }
+    }
+    &.active{
+        display: flex;
+    }
+}
+::-webkit-scrollbar {
+	width: 6px;
+  }
+::-webkit-scrollbar-thumb {
+	background: #888; 
+	height: 60px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(94, 92, 92); 
+}
+.notifiactionTable {
+    width: 100%;
+    margin: 0 auto;
+}
+.notifiactionTableIn {
+    margin-top: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.notificationTableHead,.reportTableHead {
+    background: #348DC9;
+    color: white;
+    text-align: center;
+    button {
+        background: #338BC7;
+        border: 2px solid #338BC7;
+        margin-left: 10px;
+    }
+}
+.showParentReportIn {
+    padding: 1em 0em 0em;
+}
+select.classSelect, select.studentSelect {
+    height: 39px;
+   // width: 64%;
+    background: linear-gradient(90deg, #ffffff 50%, #348DC9 50%);
+    background-position: right;
+    background-size: 40px 100%;
+    background-repeat: no-repeat;
+    border: 1px solid #348DC9;
+}
+.btn-primary {
+    background: none;
+    border: 2px solid #348DC9;
+    color: #348DC9;
+    border-radius: 10px;
+    height: 100%;
+}
+.btn-primary:hover {
+    background: #348DC9;
+    color: white;
+}
+tr {
+    text-align: center;
+}
+.table-responsive {
+    display: table;
+}
+
+
+.table.classManagementTable{
+    thead{
+        tr{
+            th{
+                border: 0;
+                border-right: 1px solid #999999;
+                vertical-align: middle;
+                text-align: center;
+                &:first-child{
+                    text-align: left;
+                }
+                &:last-child{
+                    border-right: 0;
+                }
+            }
+        }
+    }
+    tbody{
+       
+            tr{
+                td{
+                    border: 0;
+                    border-right: 1px solid #999999;
+                    padding: 0rem;
+                    vertical-align: middle;
+                    text-align: center;
+                    &>div{
+                        padding: 1rem;
+                        &:nth-child(odd){
+                            background-color: #dfe6e9;
+                        }
+                        &:last-child{
+                            border-bottom: 5px solid #ffffff;
+                        }
+                    }
+                    &:first-child{
+                        padding: 1rem;
+                        vertical-align: top;
+                        text-align: left;
+                    }
+                    &:last-child{
+                        border-right: 0;
+                    }
+                    table{
+                        tbody{
+                            tr{
+                                background-color: transparent;
+                                td{
+                                    &.classManagementActions{
+                                        border: 0;
+                                        padding: 1rem;
+                                        &:first-child{
+                                            text-align: center;
+                                        }
+                                    }
+                                    &:first-child{
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
+                        }                                   
+                        &:nth-child(odd){
+                            background-color: #dfe6e9;
+                        }
+                        &:last-child{
+                            border-bottom: 5px solid #ffffff;
+                        }
+                    }
+                }
+                &:nth-child(odd):not(.classNameRow){
+                    &>td{
+                        &:first-child{
+                            background-color: #dfe6e9;
+                        }
+                    }
+                }
+                &.classNameRow{
+                    td{
+                        table:nth-child(odd), table:nth-child(even){
+                            background-color: transparent;
+                            border: 0;
+                        }
+                    }
+                }
+                &:last-child{
+                    td{
+                        div:last-child{
+                            border: 0;
+                        }
+                        table:last-child{
+                            border: 0;
+                        }
+                    }
+                }
+        }
+    }
+}
+
+.popupHeaderIcons {
+    .expand {
+        padding-right: 20px;
+        font-size: 25px;
+        color: white;
+    }
+    .popupWindowClose {
+        font-size: 30px;
+        font-weight: bold;
+    }
+}

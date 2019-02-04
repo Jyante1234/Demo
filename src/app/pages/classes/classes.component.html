@@ -1,0 +1,196 @@
+<div class="col-8 mx-auto classManagementButtonDiv">
+  <div class="row classManagementButtonDivIn">
+    <button class="btn classManagementButton" (click)="openPopup('manageClasses')">Build Classes</button>
+    <button class="btn classManagementButton" (click)="openPopup('addStudents')">Add Students</button>
+    <button class="btn classManagementButton" (click)="openPopup('delete')">Delete</button>
+    <button class="btn classManagementButton">Assign Books</button>
+    <button class="btn classManagementButton" (click)="openPopup('password')">Print Password</button>
+  </div>
+</div>
+<div class="classManagementDiv">
+  <div class="table-responsive">
+    <table class="table classManagementTable">
+      <thead class="classManagementHeader">
+        <tr>
+          <th>
+            <mat-checkbox>Class / Group</mat-checkbox>
+          </th>
+          <th>eBooks Read</th>
+          <th>Comprehension Checks</th>
+          <th>eBook Games</th>
+          <!-- <th>Time on Book</th> -->
+          <th>Practice Game Score</th>
+          <th>Assign</th>
+          <th>Alert</th>
+          <th>Report</th>
+          <th>Student Home</th>
+          <!-- <th>Delete</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <template class="classManagementTemplate" *ngFor="let class of classes; let i = index;">
+          <tr class="classNameRow">
+            <td width="33.33%" class="className">
+              <mat-checkbox>{{class.name}}</mat-checkbox>
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <!-- <td>&nbsp;</td> -->
+            <td class="classManagementActions"><a (click)="openPopup('assignBook'); assignBook('classGroup', class.classId)"
+                class="classManagementAction"><i class="fas fa-pen-square fa-lg"></i></a></td>
+            <td class="classManagementActions">&nbsp;</td>
+            <td class="classManagementActions"><a (click)="openPopup('classReport'); openReport('classReport',class)"
+                class="classManagementAction"><i class="fas fa-money-check fa-lg"></i></a></td>
+            <td class="classManagementActions">&nbsp;</td>
+            <!-- <td class="classManagementActions">&nbsp;</td> -->
+          </tr>
+          <tr *ngFor="let classStudent of class['students']">
+            <td width="33.33%">
+              <mat-checkbox><img class="avatar" src="{{classStudent.avatar}}"> {{classStudent.firstName}}
+                {{classStudent.lastName}}</mat-checkbox>
+            </td>
+            <td>
+              <div class="w-100" *ngFor="let studentBook of classStudent['assignedBooks']">
+                <span class="bookStats">{{studentBook['bookstats'].eBooksRead}}</span>
+              </div>
+            </td>
+            <td>
+              <div class="w-100" *ngFor="let studentBook of classStudent['assignedBooks']">
+                <span class="bookStats">{{studentBook['bookstats'].completedActivities}}&nbsp;/&nbsp;{{studentBook['bookstats'].totalActivities}}</span>
+              </div>
+            </td>
+            <td>
+              <div class="w-100" *ngFor="let studentBook of classStudent['assignedBooks']">
+                <span class="bookStats">{{studentBook['bookstats'].completedGames}}&nbsp;/&nbsp;{{studentBook['bookstats'].totalGames}}</span>
+              </div>
+            </td>
+            <!-- <td>
+              <div class="w-100" *ngFor="let studentBook of classStudent['assignedBooks']">
+                <span class="bookStats">{{studentBook['bookstats'].timeOnBook.min}}&nbsp;:&nbsp;{{studentBook['bookstats'].timeOnBook.sec}}</span>
+              </div>
+            </td> -->
+            <td>
+              <div class="w-100" *ngFor="let studentBook of classStudent['assignedBooks']">
+                <span class="bookStats">{{studentBook['bookstats'].practiceGameScore}}</span>
+              </div>
+            </td>
+            <td class="classManagementActions">
+              <div *ngFor="let studentBook of classStudent['assignedBooks']; let k = index;">
+                <a *ngIf="k === 0" (click)="openPopup('assignBook'); assignBook('student', classStudent.studentId)"
+                  class="classManagementAction"><i class="fas fa-pen-square fa-lg"></i></a>
+                  <span *ngIf="k !== 0"></span>
+              </div>
+            </td>
+            <td class="classManagementActions">
+              <div *ngFor="let studentBook of classStudent['assignedBooks']; let k = index;">
+                <a (click)="openPopup('classStudentAlert'); openAlert('classStudentAlert',studentBook)" class="classManagementAction"><i
+                    class="fas fa-bell fa-lg" title="Alert"></i></a>
+              </div>
+            </td>
+            <td class="classManagementActions">
+              <div *ngFor="let studentBook of classStudent['assignedBooks']; let k = index;">
+                <a (click)="openPopup('classStudentReport'); openReport('classStudentReport', classStudent)" class="classManagementAction"><i
+                    class="fas fa-money-check fa-lg" title="Report"></i></a>
+              </div>
+            </td>
+            <td class="classManagementActions">
+              <div *ngFor="let studentBook of classStudent['assignedBooks']; let k = index;">
+                <a *ngIf="k === 0" (click)="openPopup('studentHome')" class="classManagementAction"><i class="fas fa-home fa-lg"></i></a>
+                <span *ngIf="k !== 0"></span>
+              </div>
+            </td>
+            <!-- <td class="classManagementActions">
+              <div *ngFor="let studentBook of classStudent['assignedBooks']; let k = index;">
+                <a *ngIf="k === 0" class="classManagementAction"><i class="fas fa-trash-alt fa-lg"></i></a>
+                <span *ngIf="k !== 0"></span>
+              </div>
+            </td> -->
+          </tr>
+          <template class="classManagementTemplate" *ngFor="let classGroup of class['groups']">
+            <tr class="classNameRow">
+              <td width="33.33%" class="className">
+                <mat-checkbox>{{classGroup.name}}</mat-checkbox>
+              </td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <!-- <td>&nbsp;</td> -->
+              <td class="classManagementActions"><a (click)="openPopup('assignBook')" class="classManagementAction"><i
+                    class="fas fa-pen-square fa-lg"></i></a></td>
+              <td class="classManagementActions">&nbsp;</td>
+              <td class="classManagementActions"><a (click)="openPopup('groupReport'); openReport('groupReport',classGroup)"
+                  class="classManagementAction"><i class="fas fa-money-check fa-lg" title="Report"></i></a></td>
+              <td class="classManagementActions">&nbsp;</td>
+              <!-- <td class="classManagementActions">&nbsp;</td> -->
+            </tr>
+            <tr *ngFor="let classStudent of classGroup['students']">
+              <td width="33.33%">
+                <mat-checkbox><img class="avatar" src="{{classStudent.avatar}}"> {{classStudent.firstName}}
+                  {{classStudent.lastName}}</mat-checkbox>
+              </td>
+              <td>
+                <div class="w-100" *ngFor="let studentBook of classStudent['assignedBooks']">
+                  <span class="bookStats">{{studentBook['bookstats'].eBooksRead}}</span>
+                </div>
+              </td>
+              <td>
+                <div class="w-100" *ngFor="let studentBook of classStudent['assignedBooks']">
+                  <span class="bookStats">{{studentBook['bookstats'].completedActivities}}&nbsp;/&nbsp;{{studentBook['bookstats'].totalActivities}}</span>
+                </div>
+              </td>
+              <td>
+                <div class="w-100" *ngFor="let studentBook of classStudent['assignedBooks']">
+                  <span class="bookStats">{{studentBook['bookstats'].completedGames}}&nbsp;/&nbsp;{{studentBook['bookstats'].totalGames}}</span>
+                </div>
+              </td>
+              <!-- <td>
+                <div class="w-100" *ngFor="let studentBook of classStudent['assignedBooks']">
+                  <span class="bookStats">{{studentBook['bookstats'].timeOnBook.min}}&nbsp;:&nbsp;{{studentBook['bookstats'].timeOnBook.sec}}</span>
+                </div>
+              </td> -->
+              <td>
+                <div class="w-100" *ngFor="let studentBook of classStudent['assignedBooks']">
+                  <span class="bookStats">{{studentBook['bookstats'].practiceGameScore}}</span>
+                </div>
+              </td>
+              <td class="classManagementActions">
+                <div *ngFor="let studentBook of classStudent['assignedBooks']; let k = index;">
+                  <a *ngIf="k === 0" (click)="openPopup('assignBook'); assignBook('student', classStudent.studentId)"
+                    class="classManagementAction"><i class="fas fa-pen-square fa-lg"></i></a>
+                  <span *ngIf="k !== 0"></span>
+                </div>
+              </td>
+              <td class="classManagementActions">
+                <div *ngFor="let studentBook of classStudent['assignedBooks']; let k = index;">
+                  <a (click)="openPopup('classStudentAlert'); openAlert('classStudentAlert',studentBook)" class="classManagementAction"><i
+                      class="fas fa-bell fa-lg"></i></a>
+                </div>
+              </td>
+              <td class="classManagementActions">
+                <div *ngFor="let studentBook of classStudent['assignedBooks']; let k = index;">
+                  <a (click)="openPopup('classStudentReport'); openReport('classStudentReport', classStudent)" class="classManagementAction"><i
+                      class="fas fa-money-check fa-lg"></i></a>
+                </div>
+              </td>
+              <td class="classManagementActions">
+                <div *ngFor="let studentBook of classStudent['assignedBooks']; let k = index;">
+                  <a *ngIf="k === 0" (click)="openPopup('studentHome')" class="classManagementAction"><i class="fas fa-home fa-lg"></i></a>
+                  <span *ngIf="k !== 0"></span>
+                </div>
+              </td>
+              <!-- <td class="classManagementActions">
+                <div *ngFor="let studentBook of classStudent['assignedBooks']; let k = index;">
+                  <a *ngIf="k === 0" class="classManagementAction"><i class="fas fa-trash-alt fa-lg"></i></a>
+                  <span *ngIf="k !== 0"></span>
+                </div>
+              </td> -->
+            </tr>
+          </template>
+        </template>
+      </tbody>
+    </table>
+  </div>
+</div>

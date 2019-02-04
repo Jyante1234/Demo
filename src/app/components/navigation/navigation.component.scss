@@ -1,0 +1,32 @@
+.navbar{
+    background: #f6f6f6;
+    padding: 0;
+    .navbar-nav{
+        .nav-item{
+            cursor: pointer;
+            padding: 0;
+            a{
+                padding: 0.5em 2em;
+                color: #333333;
+            }
+            .dropdown{
+                .dropdown-menu{
+                    .dropdown-item{
+                        color: inherit;
+                    }
+                }
+            }
+            &.active, &:hover{
+                background: #00b894;
+                color: #ffffff;
+                a{
+                    color: #ffffff;
+                }
+            }
+           
+        }
+    }
+}
+a.active {
+    background: #00b894;
+}

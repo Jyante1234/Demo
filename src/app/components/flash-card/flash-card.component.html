@@ -1,0 +1,11 @@
+<div class="col-12">
+  <div class="row flashCards">
+    <div *ngFor="let mockData of gamesMockData" class="col-4 col-lg flashCard">
+      <div class="flashCardIn">
+        <img class="img-fluid" src="{{mockData.gameIcon}}">
+        <p class="text-center flashCardText">{{mockData.gameTitle}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

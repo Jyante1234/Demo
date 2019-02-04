@@ -1,0 +1,87 @@
+[
+    {
+        "statusCode" : "200",
+        "statusMessage" : "Login Success",
+        "user" : [
+            {
+                "access_token" : "3696a7ef-85cc-4012-b977-b2666602e88c",
+                "email" : "mohan@orbiosolutions.com",
+                "password": "mps@123",
+                "id" : "5c07ba7dbc555102dc86b0b3",
+                "userName" : "Mohan Saginala",
+                "user_type" : "teacher"
+            }
+        ]
+    },
+    {
+        "statusCode" : "200",
+        "statusMessage" : "Login Success",
+        "user" : [
+            {
+                "access_token" : "b2666602e88c-85cc-4012-b977-3696a7ef",
+                "email" : "samrajesh.e@adi-mps.com",
+                "password": "mps@123",
+                "id" : "5c07ba7dbc555102dc86b3s0",
+                "userName" : "Sam Rajesh",
+                "user_type" : "teacher"
+            }
+        ]
+    },
+    {
+        "statusCode" : "200",
+        "statusMessage" : "Login Success",
+        "user" : [
+            {
+                "access_token" : "b2666602e88c-85cc-4012-b977-3696a7ef",
+                "email" : "jamie.west@mpslimited.com",
+                "password": "mps@123",
+                "id" : "5c07ba7dbc555102dc86b3s0",
+                "userName" : "Jamie West",
+                "user_type" : "teacher"
+            }
+        ]
+    },
+    {
+        "statusCode" : "200",
+        "statusMessage" : "Login Success",
+        "user" : [
+            {
+                "access_token" : "b2666602e88c-85cc-4012-b977-3696a7ef",
+                "email" : "priya.venkat@mpslimited.com",
+                "password": "mps@123",
+                "id" : "5c07ba7dbc555102dc86b3s0",
+                "userName" : "Priya Venkat",
+                "user_type" : "teacher"
+            }
+        ]
+    },
+    {
+        "statusCode" : "200",
+        "statusMessage" : "Login Success",
+        "user" : [
+            {
+                "access_token" : "b2666602e88c-85cc-4012-b977-3696a7ef",
+                "email" : "test@mpslimited.com",
+                "password": "mps@123",
+                "id" : "5c07ba7dbc555102dc86b3s0",
+                "userName" : "Test User",
+                "user_type" : "teacher"
+            }
+        ]
+    },
+    {
+        "statusCode" : "403",
+        "statusMessage" : "Email id or Password Mismatch",
+        "user" : []
+    },
+    {
+        "statusCode" : "404",
+        "statusMessage" : "Email not found",
+        "user" : []
+    },
+    {
+        "statusCode" : "500",
+        "statusMessage" : "Something went wront. Please try after sometime",
+        "user" : []
+    }
+]

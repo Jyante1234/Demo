@@ -1,0 +1,53 @@
+{
+    "mockDataForReport": [
+        {
+            "studentID": 1,
+            "studentName": "raghav",
+            "title": "Red",
+            "activity": 15,
+            "game": 20
+        },
+        {
+            "studentID": 2,
+            "studentName": "Shubahm",
+            "title": "Rose",
+            "activity": 14,
+            "game": 12
+        },
+        {
+            "studentID": 3,
+            "studentName": "Mohan",
+            "title": "Blue",
+            "activity": 13,
+            "game": 22
+        },
+        {
+            "studentID": 4,
+            "studentName": "Nikhil",
+            "title": "black",
+            "activity": 1,
+            "game": 212
+        },
+        {
+            "studentID": 5,
+            "studentName": "Devjith",
+            "title": "Red",
+            "activity": 15,
+            "game": 20
+        },
+        {
+            "studentID": 6,
+            "studentName": "Ashwin",
+            "title": "NavyBlue",
+            "activity": 15,
+            "game": 31
+        },
+        {
+            "studentID": 7,
+            "studentName": "Sumit",
+            "title": "Red",
+            "activity": 16,
+            "game": 20
+        }
+    ]
+}

@@ -1,0 +1,251 @@
+<div class="container justify-content-between" *ngIf="playVideoShow && showJMaxTV">
+  <div class="videoPlayer">
+    <!--<video width="520" height="240" controls autoplay>
+      <source src="https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video> -->
+  </div>
+</div>
+
+<div class="container ">
+  <div class="row sharedThreeBtns">
+    <div class="sharedBtnsIn col">
+      <button class="btn btn-primary firstBtn" type="button" (click)="johnnieMaxTv()">Johnnie Max TV</button>
+    </div>
+    <div class="sharedBtnsIn col">
+      <button class="btn btn-primary " type="button" (click)="johnnieMaxVote()">Vote!</button>
+    </div>
+    <div class="sharedBtnsIn col">
+      <button class="btn btn-primary " type="button" (click)="askJohnnieMax()">Ask Johnnie Max</button>
+    </div>
+  </div>
+  <!--Johnnie Max TV Start-->
+  <div class="row sharedSpace johnnie-max-tv" *ngIf="showJMaxTV">
+    <div class="sharedSpaceIn" *ngFor="let mockData of mockDataJohnnieMaxTv['johnnieMaxTV']">
+      <div class="jMaxTv" (click)="openPopup('video'); playVideo('video', mockData.JMax_videoUrl)" [style.backgroundColor]="mockData.colorCode">
+        <img class="img-fluid coverImage" src="{{mockData.JMax_videoCoverImage}}" alt="{{mockData.JMax_videoName}}">
+        <div class="centered"><i class="fab fa-youtube centeredIcon"></i></div>
+        <p class="gameTitle">{{mockData.JMax_videoTitle}}</p>
+      </div>
+    </div>
+  </div>
+  <!--Johnnie Max TV End-->
+  <!--Vote Start-->
+  <div class="col-12 vote myclasses" *ngIf="showVote">
+    <div class="row voteRow">
+      <template class="card w-100 voteRowIn" *ngFor="let mockData of mockDataVote['myClassMockData']">
+        <div class="className">
+          <span class="classNameText">
+            Class: {{mockData.className}}
+          </span>
+        </div>
+        <div class="voteBody" *ngFor="let voteData of mockData['eBook']; let i = index">
+          <div id="accordion" class="card voteBodyIn col-12">
+            <div class="row card-header voteBodyHeader align-items-center justify-content-between"
+              [style.backgroundColor]="voteData.colorCode">
+              <div class="d-flex align-items-center">
+                <div class="voteHeaderImage">
+                  <img src="{{voteData.bookImage}}" class="img-fluid headerImage">
+                </div>
+                <div class="col voteHeaderName">
+                  <a class="card-link" data-toggle="collapse" href="#class{{i}}">
+                    {{voteData.bookName}}
+                  </a>
+                </div>
+              </div>
+              <div class="voteHeaderQuestion">
+                <a class="float-right" data-toggle="collapse" href="#class{{i}}">{{voteData.question}}</a>
+              </div>
+            </div>
+            <div id="class{{i}}" class="collapse w-100" data-parent="#accordion">
+              <div class="row card-body voteBodyBody ">
+                <div class="col-lg-3 col-md-4 votersList" *ngFor="let optionData of voteData['optionNames']">
+                  <div class="votersListIn">
+                    <div class="w-100 votersOptionImage row align-items-center justify-content-between">
+                      <div class="d-flex align-items-center">
+                        <div class="">
+                          <img src="{{optionData.optionImage}}" class="img-fluid headerImage">
+                        </div>
+                        <div class="">
+                          <span class="col voterOptionName">{{optionData.optionName}}</span>
+                        </div>
+                      </div>
+                      <div *ngFor="let voters of optionData['voters']; let k = count; let z = last">
+                        <div *ngIf="z" class="voteHeaderQuestion">
+                          <span class="totalVotes">{{k}}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="votersNames" *ngFor="let voters of optionData['voters']; let k = count">
+                      <ul class="votersNamesIn">
+                        <li class="allNames">{{voters.name}} </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="display: block">
+                <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                  [legend]="barChartLegend" [chartType]="barChartType">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </template>
+      <template class="card w-100 voteRowIn otherClass" *ngFor="let mockData of mockDataVote['otherClassMockData']">
+        <div class="className">
+          <span class="classNameText">
+            Class: {{mockData.className}}
+          </span>
+        </div>
+        <div class="voteBody" *ngFor="let voteData of mockData['eBook']; let j = index">
+          <div id="accordion" class="card voteBodyIn col-12">
+            <div class="row card-header voteBodyHeader align-items-center justify-content-between"
+              [style.backgroundColor]="voteData.colorCode">
+              <div class="d-flex align-items-center">
+                <div class="voteHeaderImage">
+                  <img src="{{voteData.bookImage}}" class="img-fluid headerImage">
+                </div>
+                <div class="col voteHeaderName">
+                  <a class="card-link" data-toggle="collapse" href="#classs{{j}}">
+                    {{voteData.bookName}}
+                  </a>
+                </div>
+              </div>
+              <div class="voteHeaderQuestion">
+                <a class="float-right" data-toggle="collapse" href="#classs{{j}}">{{voteData.question}}</a>
+              </div>
+            </div>
+            <div id="classs{{j}}" class="collapse w-100" data-parent="#accordion">
+              <div class="row card-body voteBodyBody ">
+                <div class="col-lg-3 col-md-4 votersList" *ngFor="let optionData of voteData['optionNames']">
+                  <div class="votersListIn">
+                    <div class="w-100 votersOptionImage row align-items-center justify-content-between">
+                      <div class="d-flex align-items-center">
+                        <div class="">
+                          <img src="{{optionData.optionImage}}" class="img-fluid headerImage">
+                        </div>
+                        <div class="">
+                          <span class="col voterOptionName">{{optionData.optionName}}</span>
+                        </div>
+                      </div>
+                      <div *ngFor="let voters of optionData['voters']; let k = count; let z = last">
+                        <div *ngIf="z" class="voteHeaderQuestion">
+                          <span class="totalVotes">{{k}}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="votersNames" *ngFor="let voters of optionData['voters']">
+                      <ul class="votersNamesIn">
+                        <li class="allNames">{{voters.name}}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+  </div>
+  <!--Vote End-->
+  <!--Ask Johnnie Max Start-->
+  <div class="col-12" *ngIf="showAskJohnnieMax">
+    <div class="row askQuestionBtn">
+      <button class="btn btn-primary  askQuestionBtnIn" (click)="openInputForQuestion()">Ask Question?</button>
+    </div>
+    <div class="">
+      <div class="row askJohnnieMaxRow">
+        <template class="card w-100 askJohnnieMaxRowIn myClass" *ngFor="let mockData of mockDataAskJohhnieMax['askJohnnieMaxQuestion']">
+          <div class="askBody" *ngFor="let myclassData of mockData['myClass']">
+            <div class="card-header askJohnnieMaxHeaderForMyClass">
+              My Classes: <span class="className ask">{{myclassData.class}}</span>
+              <span class="totalQuestions ask">Total Questions: {{totalQuestionLength}}</span>
+            </div>
+            <div class="full-body">
+              <div class="row questionInput" *ngIf="showInputForQuestion">
+                <form #askQuestionForm="ngForm" class="w-100" (ngSubmit)="askQuestionMethod(askQuestion); cb = -1" autocomplete="off">
+                  <label>From <span class="labelName">Ram:</span></label>
+                  <input class="form-control" #askQuestion="ngModel" minlength="5" required ngModel name="askQuestion"
+                    id="askQuestion">
+                  <div *ngIf="askQuestionForm.submitted && askQuestion.invalid" class="invalid-feedback">
+                    <div *ngIf="askQuestion.errors.required">Enter Question</div>
+                  </div>
+                  <div *ngIf="askQuestionForm.submitted && askQuestion.invalid" class="invalid-feedback">
+                    <div *ngIf="askQuestion.errors.minlength">Minimum 5 Characters Required</div>
+                  </div>
+                  <div class="col-12">
+                    <div class="row questionBtns float-right">
+                      <button type="button" class="btn btn-primary cancelBtn" (click)="closeInputForQuestion()">Cancel</button>
+                      <button type="submit" [disabled]="!askQuestionForm.valid" class="btn btn-primary sendBtn">Send</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="card-body askJohnnieMaxBody">
+                <div class=" " *ngIf="showAskedQuestions">
+                  <div class="row sessionQuestions" *ngFor="let sessionData of questions; let i = index">
+                    <p class="from ask col-lg-8 col-md-8 col-8 getSession">From: <span class="name">Sam&nbsp;&nbsp;</span></p>
+                    <p class="questionName ask col-lg-8 col-md-8 col-8 getAnswer" [class.d-none]="cb===i">{{sessionData}}</p>
+                    
+                    <input type="text" [autofocus]="cb === i" class="form-control col-lg-8 col-md-8 col-8 inputForEdit"
+                      [class.d-block]="cb===i" [(ngModel)]="bindSessionDataToInput" name="getSessionQuestion" ngModel
+                      #afterEditQuestion="ngModel">
+                    <i class="fas fa-edit" *ngIf="cb !== i" (click)="editQuestion(sessionData); cb = i"></i>
+                    <i class="fas fa-times" *ngIf="cb === i" (click)="editQuestion(sessionData); cb = -1"></i>
+                    <i class="fas fa-check" *ngIf="cb === i" (click)="updateQuestion(afterEditQuestion, i); cb = -1"></i>
+                    <i class="fas fa-trash-alt deleteIcon" (click)="deleteQuestion(sessionData,i)"></i>
+                    <div class="row">
+                      <p class="ask johnnieMaxAnswer col-lg-6 col-md-6 col-8">Johnnie Max&nbsp;&nbsp;
+                        <img src="assets/askJohnnieMaxImages/houston.jpg" class="img-fluid avatar">
+                      </p>
+                      <p class="ask col-lg-8 col-md-8 col-8"> Thank You! Johnnie Max will answer shortly.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="askJohnnieMaxBodyIn" *ngFor="let questionsData of myclassData['questions']">
+                  <div class="row questionAvatar">
+                    <p class="from ask">From: <span class="name">{{questionsData.questionFrom}}&nbsp;&nbsp;</span></p>
+                    <span><img src="{{questionsData.questionFromAvatar}}" class="img-fluid avatar"></span>
+                  </div>
+                  <p class="questionName ask">{{questionsData.question}}</p>
+                  <div class="row questionAvatar">
+                    <P class="from ask"><span class="name"> {{questionsData.answerFrom}}&nbsp;&nbsp;</span></P>
+                    <span><img src="{{questionsData.answerFromAvatar}}" class="img-fluid avatar"></span>
+                  </div>
+                  <p class="ask">{{questionsData.answer}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+        <template class="card w-100 askJohnnieMaxRowIn otherClass" *ngFor="let mockData of mockDataAskJohhnieMax['askJohnnieMaxQuestion']">
+          <div class="askBody" *ngFor="let myclassData of mockData['otherClass']">
+            <div class="card-header askJohnnieMaxHeaderForMyClass otherClassHead">
+              <span class="className">My Classes: </span><span class=" ask">{{myclassData.class}}</span>
+              <span class="totalQuestions ask">Total Questions:{{askJohnnieMaxOtherClassQuestionLength}} </span>
+            </div>
+            <div class="card-body askJohnnieMaxBody">
+              <div class="askJohnnieMaxBodyIn" *ngFor="let questionsData of myclassData['questions']">
+                <div class="row questionAvatar">
+                  <p class="from ask">From: <span class="name">{{questionsData.questionFrom}}&nbsp;&nbsp;</span></p>
+                  <span><img src="{{questionsData.questionFromAvatar}}" class="img-fluid avatar"></span>
+                </div>
+                <p class="questionName ask">{{questionsData.question}}</p>
+                <div class="row questionAvatar">
+                  <P class="from ask"><span class="name"> {{questionsData.answerFrom}}&nbsp;&nbsp;</span></P>
+                  <span><img src="{{questionsData.answerFromAvatar}}" class="img-fluid avatar"></span>
+                </div>
+                <p class="ask">{{questionsData.answer}}</p>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+  <!--Ask Johnnie Max End-->
+
+</div>

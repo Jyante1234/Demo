@@ -1,3 +1,22 @@
-
-<a routerLink="/booking">Booking</a>
-<router-outlet></router-outlet>
+<app-login *ngIf="!userLoggedIn"></app-login>
+<div *ngIf="userLoggedIn && teacherLoggedIn" class="singlePage" [ngClass]="{overFlowHidden: popupOpen}">
+    <div class="w-100">
+        <app-header class="w-100"></app-header>
+        <div class="container rootContainer">
+            <div class="row singlePageIn">
+                <router-outlet></router-outlet>
+                <app-popup></app-popup>
+            </div>
+        </div>
+    </div>
+    <app-footer class="w-100 align-self-end"></app-footer>
+</div>
+<div *ngIf="userLoggedIn && studentLoggedIn" class="singlePage">
+    <div class="container">
+        <div class="row singlePageIn">
+            <div class="w-100">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

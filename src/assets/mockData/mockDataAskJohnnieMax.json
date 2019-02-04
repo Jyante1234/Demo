@@ -1,0 +1,56 @@
+{
+    "askJohnnieMaxQuestion": [
+        {
+            "myClass": [
+                {
+                    "class": "class1",
+                    "questions": [
+                        {
+                            "questionID": 1,
+                            "questionFrom": "Priya V",
+                            "questionFromAvatar": "assets/askJohnnieMaxImages/priya.png",
+                            "question": "Do penguins lay eggs?",
+                            "answerFrom": "Johnnie Max",
+                            "answerFromAvatar": "assets/askJohnnieMaxImages/houston.jpg",
+                            "answer": "Yes, Penguins lay eggs! The male sils on the eggs untill they hotch"
+                        },
+                        {
+                            "questionID": 2,
+                            "questionFrom": "Priya V",
+                            "questionFromAvatar": "assets/askJohnnieMaxImages/priya.png",
+                            "question": "I love the picture of the frog in “Red.”",
+                            "answerFrom": "Johnnie Max",
+                            "answerFromAvatar": "assets/askJohnnieMaxImages/houston.jpg",
+                            "answer": "Thank You! it was fun taking that picture!"
+                        }
+                    ]
+                }
+            ],
+            "otherClass": [
+                {
+                    "class": "class1",
+                    "questions": [
+                        {
+                            "questionID": 1,
+                            "questionFrom": "Houstan",
+                            "questionFromAvatar": "assets/askJohnnieMaxImages/priya.png",
+                            "question": "Hi! How old is your dog?",
+                            "answerFrom": "Johnnie Max",
+                            "answerFromAvatar": "assets/askJohnnieMaxImages/houston.jpg",
+                            "answer": "Hi! my dog is one year old."
+                        },
+                        {
+                            "questionID": 2,
+                            "questionFrom": "Priya V",
+                            "questionFromAvatar": "assets/askJohnnieMaxImages/priya.png",
+                            "question": "I love the picture of the frog in “Red.”",
+                            "answerFrom": "Johnnie Max",
+                            "answerFromAvatar": "assets/askJohnnieMaxImages/houston.jpg",
+                            "answer": "Thank You! it was fun taking that picture!"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

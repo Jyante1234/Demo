@@ -1,0 +1,91 @@
+.appLogin{
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #979797;
+    .loginDiv{
+        position: relative;
+        background-color: #BEBEBE;
+        padding: 30px;
+        box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        .loginDivIn{
+            position: relative;
+        }
+        align-items: center;
+        .loginFormDiv{
+            background: #ECECEC;
+            border-radius: 5px;
+            border-bottom: 2px solid #969696;
+            padding-bottom: 2em;
+            .loginHead{
+                position: absolute;
+                left: 2em;
+                top: -2em;
+                color: #BFBFBF;
+                font-size: 20px;
+                margin: 0;
+                font-weight: 500;
+            }
+        }
+        .loginForm{
+            padding: 30px 15px;
+            margin: 3em auto 1em;
+            input{
+                background-color: #ffffff;
+                border-radius: 10px;
+                color: #3b3b3b;
+                font-size: 24px;
+                border: 0;
+                margin-bottom: 1em;
+                background-size: auto 70%;
+                background-position: 2% center;
+                background-repeat: no-repeat;
+                box-shadow: 0px 0px 10px 0.1px rgba(0,0,0,0.1);
+                padding: 25px 25px 25px 50px;
+                &::placeholder{
+                    color: #808080;
+                }
+                &.loginEmail{
+                    background-image: url('../../../../assets/images/userIcon.png');
+                }
+                &.loginPassword{
+                    background-image: url('../../../../assets/images/passwordIcon.png');
+                }
+                &.rememberLogin{
+                    margin: 0;
+                    width: 1rem;
+                    height: 1rem;
+                    margin-right: 5px;
+                }
+            }
+            .loginOptions{
+                color: #808080;
+            }
+            button{
+                background: #333333;
+                color: #ffffff;
+                border-radius: 10px;
+                padding: 5px 50px;
+            }
+        }
+        a{
+            text-decoration: none;
+            &:hover{
+                text-decoration: none;
+            }
+            &:focus{
+                text-decoration: none;
+            }
+        }
+    }
+    .userSelectionNone{
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}

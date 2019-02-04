@@ -1,0 +1,440 @@
+{
+    "classes": [
+        {
+            "assignedBooks": [],
+            "classId": "8osytn",
+            "groupIds": [
+                "gqxa6f"
+            ],
+            "groups": [
+                {
+                    "assignedBooks": [],
+                    "groupId": "gqxa6f",
+                    "name": "group a",
+                    "students": [
+                        {
+                            "firstName": "peter",
+                            "lastName": "antony",
+                            "userName": "peterantony",
+                            "password": "pAntonY!244",
+                            "avatar": "assets/avatars/pikachu-2.png",
+                            "assignedBooks": [
+                                {
+                                    "bookstats": {
+                                        "eBooksRead": "Red",
+                                        "totalActivities": "12",
+                                        "completedActivities": "5",
+                                        "totalGames": "12",
+                                        "completedGames": "12",
+                                        "timeOnBook": {
+                                            "min": "12",
+                                            "sec": "00"
+                                        },
+                                        "practiceGameScore": "10"
+                                    }
+                                },
+                                {
+                                    "bookstats": {
+                                        "eBooksRead": "Label",
+                                        "totalActivities": "10",
+                                        "completedActivities": "5",
+                                        "totalGames": "12",
+                                        "completedGames": "12",
+                                        "timeOnBook": {
+                                            "min": "12",
+                                            "sec": "30"
+                                        },
+                                        "practiceGameScore": "10"
+                                    }
+                                }
+                            ],
+                            "studentId": "k650d3e"
+                        }
+                    ]
+                }
+            ],
+            "name": "class a",
+            "students": [
+                {
+                    "firstName": "peter",
+                    "lastName": "antony",
+                    "userName": "peterantony",
+                    "password": "pAntonY!244",
+                    "avatar": "assets/avatars/pikachu-2.png",
+                    "assignedBooks": [
+                        {
+                            "bookstats": {
+                                "eBooksRead": "Red",
+                                "totalActivities": "12",
+                                "completedActivities": "5",
+                                "totalGames": "12",
+                                "completedGames": "12",
+                                "timeOnBook": {
+                                    "min": "12",
+                                    "sec": "00"
+                                },
+                                "practiceGameScore": "10"
+                            }
+                        },
+                        {
+                            "bookstats": {
+                                "eBooksRead": "Label",
+                                "totalActivities": "10",
+                                "completedActivities": "5",
+                                "totalGames": "12",
+                                "completedGames": "12",
+                                "timeOnBook": {
+                                    "min": "12",
+                                    "sec": "30"
+                                },
+                                "practiceGameScore": "10"
+                            }
+                        }
+                    ],
+                    "studentId": "k650d3e"
+                },
+                {
+                    "firstName": "daven",
+                    "lastName": "symes",
+                    "userName": "davensymes",
+                    "password": "devSm_1",
+                    "avatar": "assets/avatars/bellsprout.png",
+                    "assignedBooks": [
+                        {
+                            "bookstats": {
+                                "eBooksRead": "Red",
+                                "totalActivities": "12",
+                                "completedActivities": "5",
+                                "totalGames": "12",
+                                "completedGames": "12",
+                                "timeOnBook": {
+                                    "min": "12",
+                                    "sec": "00"
+                                },
+                                "practiceGameScore": "10"
+                            }
+                        },
+                        {
+                            "bookstats": {
+                                "eBooksRead": "Label",
+                                "totalActivities": "10",
+                                "completedActivities": "5",
+                                "totalGames": "12",
+                                "completedGames": "12",
+                                "timeOnBook": {
+                                    "min": "12",
+                                    "sec": "30"
+                                },
+                                "practiceGameScore": "10"
+                            }
+                        }
+                    ],
+                    "studentId": "k650d3e"
+                }
+            ]
+        },
+        {
+            "assignedBooks": [],
+            "classId": "aawwg",
+            "groupIds": [
+                "enw9nn"
+            ],
+            "groups": [
+                {
+                    "assignedBooks": [],
+                    "groupId": "enw9nn",
+                    "name": "group b",
+                    "students": [
+                        {
+                            "firstName": "tina",
+                            "lastName": "dimps",
+                            "userName": "tinadimps",
+                            "password": "dTina@13",
+                            "avatar": "assets/avatars/jigglypuff.png",
+                            "assignedBooks": [
+                                {
+                                    "bookstats": {
+                                        "eBooksRead": "Red",
+                                        "totalActivities": "12",
+                                        "completedActivities": "5",
+                                        "totalGames": "12",
+                                        "completedGames": "12",
+                                        "timeOnBook": {
+                                            "min": "12",
+                                            "sec": "00"
+                                        },
+                                        "practiceGameScore": "10"
+                                    }
+                                },
+                                {
+                                    "bookstats": {
+                                        "eBooksRead": "Label",
+                                        "totalActivities": "10",
+                                        "completedActivities": "5",
+                                        "totalGames": "12",
+                                        "completedGames": "12",
+                                        "timeOnBook": {
+                                            "min": "12",
+                                            "sec": "30"
+                                        },
+                                        "practiceGameScore": "10"
+                                    }
+                                }
+                            ],
+                            "studentId": "hpsc7"
+                        }
+                    ]
+                }
+            ],
+            "name": "class b",
+            "students": [
+                {
+                    "firstName": "tina",
+                    "lastName": "dimps",
+                    "userName": "tinadimps",
+                    "password": "dTina@13",
+                    "avatar": "assets/avatars/jigglypuff.png",
+                    "assignedBooks": [
+                        {
+                            "bookstats": {
+                                "eBooksRead": "Red",
+                                "totalActivities": "12",
+                                "completedActivities": "5",
+                                "totalGames": "12",
+                                "completedGames": "12",
+                                "timeOnBook": {
+                                    "min": "12",
+                                    "sec": "00"
+                                },
+                                "practiceGameScore": "10"
+                            }
+                        },
+                        {
+                            "bookstats": {
+                                "eBooksRead": "Label",
+                                "totalActivities": "10",
+                                "completedActivities": "5",
+                                "totalGames": "12",
+                                "completedGames": "12",
+                                "timeOnBook": {
+                                    "min": "12",
+                                    "sec": "30"
+                                },
+                                "practiceGameScore": "10"
+                            }
+                        }
+                    ],
+                    "studentId": "hpsc7"
+                }
+            ]
+        }
+    ],
+    "groups": [
+        {
+            "assignedBooks": [],
+            "groupId": "gqxa6f",
+            "name": "group a",
+            "students": [
+                {
+                    "firstName": "peter",
+                    "lastName": "antony",
+                    "userName": "peterantony",
+                    "password": "pAntonY!244",
+                    "avatar": "assets/avatars/pikachu-2.png",
+                    "assignedBooks": [
+                        {
+                            "bookstats": {
+                                "eBooksRead": "Red",
+                                "totalActivities": "12",
+                                "completedActivities": "5",
+                                "totalGames": "12",
+                                "completedGames": "12",
+                                "timeOnBook": {
+                                    "min": "12",
+                                    "sec": "00"
+                                },
+                                "practiceGameScore": "10"
+                            }
+                        },
+                        {
+                            "bookstats": {
+                                "eBooksRead": "Label",
+                                "totalActivities": "10",
+                                "completedActivities": "5",
+                                "totalGames": "12",
+                                "completedGames": "12",
+                                "timeOnBook": {
+                                    "min": "12",
+                                    "sec": "30"
+                                },
+                                "practiceGameScore": "10"
+                            }
+                        }
+                    ],
+                    "studentId": "k650d3e"
+                }
+            ]
+        },
+        {
+            "assignedBooks": [],
+            "groupId": "enw9nn",
+            "name": "group b",
+            "students": [
+                {
+                    "firstName": "tina",
+                    "lastName": "dimps",
+                    "userName": "tinadimps",
+                    "password": "dTina@13",
+                    "avatar": "assets/avatars/jigglypuff.png",
+                    "assignedBooks": [
+                        {
+                            "bookstats": {
+                                "eBooksRead": "Red",
+                                "totalActivities": "12",
+                                "completedActivities": "5",
+                                "totalGames": "12",
+                                "completedGames": "12",
+                                "timeOnBook": {
+                                    "min": "12",
+                                    "sec": "00"
+                                },
+                                "practiceGameScore": "10"
+                            }
+                        },
+                        {
+                            "bookstats": {
+                                "eBooksRead": "Label",
+                                "totalActivities": "10",
+                                "completedActivities": "5",
+                                "totalGames": "12",
+                                "completedGames": "12",
+                                "timeOnBook": {
+                                    "min": "12",
+                                    "sec": "30"
+                                },
+                                "practiceGameScore": "10"
+                            }
+                        }
+                    ],
+                    "studentId": "hpsc7"
+                }
+            ]
+        }
+    ],
+    "students": [
+        {
+            "firstName": "peter",
+            "lastName": "antony",
+            "userName": "peterantony",
+            "password": "pAntonY!244",
+            "avatar": "assets/avatars/pikachu-2.png",
+            "assignedBooks": [
+                {
+                    "bookstats": {
+                        "eBooksRead": "Red",
+                        "totalActivities": "12",
+                        "completedActivities": "5",
+                        "totalGames": "12",
+                        "completedGames": "12",
+                        "timeOnBook": {
+                            "min": "12",
+                            "sec": "00"
+                        },
+                        "practiceGameScore": "10"
+                    }
+                },
+                {
+                    "bookstats": {
+                        "eBooksRead": "Label",
+                        "totalActivities": "10",
+                        "completedActivities": "5",
+                        "totalGames": "12",
+                        "completedGames": "12",
+                        "timeOnBook": {
+                            "min": "12",
+                            "sec": "30"
+                        },
+                        "practiceGameScore": "10"
+                    }
+                }
+            ],
+            "studentId": "k650d3e"
+        },
+        {
+            "firstName": "tina",
+            "lastName": "dimps",
+            "userName": "tinadimps",
+            "password": "dTina@13",
+            "avatar": "assets/avatars/jigglypuff.png",
+            "assignedBooks": [
+                {
+                    "bookstats": {
+                        "eBooksRead": "Red",
+                        "totalActivities": "12",
+                        "completedActivities": "5",
+                        "totalGames": "12",
+                        "completedGames": "12",
+                        "timeOnBook": {
+                            "min": "12",
+                            "sec": "00"
+                        },
+                        "practiceGameScore": "10"
+                    }
+                },
+                {
+                    "bookstats": {
+                        "eBooksRead": "Label",
+                        "totalActivities": "10",
+                        "completedActivities": "5",
+                        "totalGames": "12",
+                        "completedGames": "12",
+                        "timeOnBook": {
+                            "min": "12",
+                            "sec": "30"
+                        },
+                        "practiceGameScore": "10"
+                    }
+                }
+            ],
+            "studentId": "hpsc7"
+        },
+        {
+            "firstName": "daven",
+            "lastName": "symes",
+            "userName": "davensymes",
+            "password": "devSm_1",
+            "avatar": "assets/avatars/bellsprout.png",
+            "assignedBooks": [
+                {
+                    "bookstats": {
+                        "eBooksRead": "Red",
+                        "totalActivities": "12",
+                        "completedActivities": "5",
+                        "totalGames": "12",
+                        "completedGames": "12",
+                        "timeOnBook": {
+                            "min": "12",
+                            "sec": "00"
+                        },
+                        "practiceGameScore": "10"
+                    }
+                },
+                {
+                    "bookstats": {
+                        "eBooksRead": "Label",
+                        "totalActivities": "10",
+                        "completedActivities": "5",
+                        "totalGames": "12",
+                        "completedGames": "12",
+                        "timeOnBook": {
+                            "min": "12",
+                            "sec": "30"
+                        },
+                        "practiceGameScore": "10"
+                    }
+                }
+            ],
+            "studentId": "k650d3e"
+        }
+    ]
+}

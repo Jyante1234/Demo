@@ -1,0 +1,40 @@
+<div class="container-fluid appLogin">
+  <div class="w-100">
+    <div class="col-6 mx-auto loginDiv">
+      <div class="row loginDivIn">
+        <div class="col-8 mx-auto">
+          <img class="img-fluid mx-auto d-block" src="assets/images/loginPageLogo.png">
+        </div>
+        <form #loginForm="ngForm" class="col-8 mx-auto loginForm" (ngSubmit)="loginForm.form.valid && loginFormSubmit(loginForm.value)" autocomplete="off">
+          <div class="row">
+            <div class="col-10 mx-auto">
+              <div class="row">
+                <input class="form-control loginEmail" name="loginEmail" type="text" placeholder="Username" [pattern]="'^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$'" [(ngModel)]="loginForm.loginEmail" #loginEmail="ngModel" required email>
+                <div *ngIf="loginForm.submitted && loginEmail.invalid" [class]="'formAlert col-12 text-danger font-weight-bold'">
+                  <div *ngIf="loginEmail.errors.required" [class]="'row'">
+                    Email is required.
+                  </div>
+                  <div *ngIf="loginEmail.errors?.pattern" [class]="'row'">
+                    Email must be a valid email address.
+                  </div>
+                </div>
+                <input class="form-control loginPassword" name="loginPassword" type="password" placeholder="Password" [(ngModel)]="loginForm.loginPassword" #loginPassword="ngModel" required>
+                <div *ngIf="loginForm.submitted && loginPassword.invalid" [class]="'formAlert col-12 text-danger font-weight-bold'">
+                  <div *ngIf="loginPassword.errors.required" [class]="'row'">
+                    Password is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p *ngIf="loginSubmitted" class="w-100 text-danger font-weight-bold text-center">{{statusResponse}}</p>
+            <div class="w-100 d-flex justify-content-between loginOptions">
+              <label class="d-flex align-items-center userSelectionNone"><input class="rememberLogin" type="checkbox">Remember Me</label>
+              <a>Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn d-block mx-auto">LOGIN</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="defaultHeader">
+  <nav class="navbar navbarTop">
+    <div class="container">
+      <div class="row">
+        <div class="headerLogo col-12">
+          <div class="row">
+            <img class="headerLogoImg img-fluid" src="assets/images/loginPageLogo.png" routerLink="/">
+            <div class="elementary col-md-9 offset-md-3">
+              <div class="row elementaryIn">
+                <a class="navbar-brand" href="#"><b>MPS Elementary</b></a>
+                <div class="col-lg-2 col-md-2">
+                  <img class="searchIcon" src="assets/images/searchIcon.png">
+                </div>
+                <div class="col-lg-2 col-md-2">
+                  <div class="row teacherRow">
+                    <img class="teacherIcon" src="assets/images/teacherIcon.png">
+                    <a class="navbar-brand" href="#"><b>&nbsp;&nbsp;{{userName}}</b></a>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-2 help-logout">
+                  <div class="col-lg-1 col-md-1 helpIn">
+                    <div class="row headerIn">
+                      <img class="helpIcon" src="assets/images/helpIcon.png">
+                      <b>Help</b>
+                    </div>
+                  </div>
+                  <div class="col-lg-1 col-md-1 logoutIn">
+                    <div class="row headerIn">
+                      <img class="logoutIcon" src="assets/images/logoutIcon.png" (click)="logOut()">
+                      <b class="logoutText" (click)="logOut()">Logout</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <nav class="navbar navbarBottom">
+    <div class="container">
+      <div class="row">
+        <div class="offset-md-2 navItems">
+          <div class="col navItemsIn" *ngFor="let data of mockDataForNavigation">
+            <div>
+              <img src="{{data.icon}}" alt="{{data.linkName}}" [routerLinkActive]="['active']"
+                [routerLinkActiveOptions]="{exact: true}" [routerLink]="data?.link" class="img-fluid navImages">
+              <div class="items">
+                <div class="navLink" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"
+                  [routerLink]="data?.link">
+                  <b>{{data.linkName}}</b>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- <div class="headerUserSettings">
+    <div class="userProfile"></div>
+    <div class="userHelp" (click)="logOut()">Logout</div>
+  </div>
+  <div class="headerLogo">
+    <img class="headerLogoImg" src="../../../../assets/images/loginPageLogo.png">
+  </div> -->

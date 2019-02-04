@@ -1,0 +1,218 @@
+.cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+                0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+.cdk-drop-list{
+    min-height: 50px;
+}
+.classListClass, .groupListGroup, .studentListStudent{
+    position: relative;
+    padding: 10px;
+    border: solid 1px #ccc;
+    color: rgba(0, 0, 0, 0.87);
+    cursor: move;
+    font-size: 14px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: inset 0px 0px 10px 0.1px rgba(0,0,0,0.1);
+    text-transform: capitalize;
+}
+.classListClass{
+    cursor: pointer;
+}
+.card{
+    margin-bottom: 1em;
+    padding: 0;
+    .card-header{
+        padding: 0;
+        .card-link{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            color: #495057;
+            font-weight: bold;
+            span{
+                padding: 6px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        .changeClassNameForm, .changeGroupNameForm{
+            display: none;
+            padding: 10px;
+            input{
+                border: 1px solid rgba(0,0,0,0.3);
+                border-radius: 20px;
+                background-color: #ffffff;
+                padding: 5px 15px;
+                &:focus{
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+        }
+        .changeClassNameToggler, .changeGroupNameToggler{
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-60%);
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-between;
+            width: 80px;
+            span{
+                cursor: pointer;
+            }
+        }
+    }
+    .collapse {
+        .card-body{
+            padding: 0.5em 1em;
+        }
+        & + .collapseIndicator{
+            &:before{
+                content: '>';
+                position: absolute;
+                right: 10px;
+                transform: scale(1, 1.5) translate(-2.5px, -2.5px);
+                font-weight: bold;
+                font-size: 20px;
+                top: 10px;
+            }
+        }
+        &.show + .collapseIndicator{
+            &:before{
+                transform: rotate(90deg) scale(1, 1.5);
+            }
+        }
+    }
+}
+.changeStudentNameToggler{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-60%);
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    span{
+        cursor: pointer;
+    }
+}
+.changeStudentNameForm{
+    display: none;
+    padding: 0px;
+    input{
+        border: 1px solid rgba(0,0,0,0.3);
+        border-radius: 20px;
+        background-color: #ffffff;
+        padding: 5px 15px;
+        &:focus{
+            box-shadow: none;
+            outline: none;
+        }
+    }
+}
+.studentName{
+    display: block;
+    padding: 6px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #495057;
+    font-weight: bold;
+}
+.studentNameShow {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+.studentListStudent{
+    margin-bottom: 1em;
+}
+.classListClass:before, .groupListGroup:before, .studentListStudent:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 103%;
+    width: 5px;
+    -webkit-transform: translateX(-50%);
+    transform: translate(-40%, -1%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.classListClass:before{
+    background-color: #E51A49;
+}
+.groupListGroup:before{
+    background-color: #FFCB21;
+}
+.studentListStudent:before{
+    background-color: #338BC7;
+}
+#classesCollapse, #groupsCollapse, #studentsCollapse{
+    padding: 0px 5px;
+    margin-top: 1em;
+    max-height: 60vh;
+    overflow: hidden auto;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+}
+.classManagementClass, .classManagementGroup, .classManagementStudent{
+    padding: 1em;
+}
+.classManagementForms{
+    display: -webkit-flex;
+    display: flex;
+    input, button{
+      border: 1px solid rgba(0,0,0,0.3);
+      border-radius: 20px;
+      background-color: #ffffff;
+      &:focus{
+        box-shadow: none;
+      }
+    }
+    button {
+      color: #495057;
+      margin-left: 1em;
+      text-transform: capitalize;
+      &:hover{
+        background-color: #338BC7;
+        color: #ffffff;
+      }
+    }
+}
+.avatar{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    object-position: center;
+    display: inline-block;
+    cursor: pointer;
+}

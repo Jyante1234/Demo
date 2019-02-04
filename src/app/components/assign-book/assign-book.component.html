@@ -1,0 +1,109 @@
+<div class="assignBook">
+  <div class="col-12">
+    <form #bookFilterForm="ngForm" class="row text-center">
+      <div class="col">
+        <mat-checkbox #checkboxMultiple (change)="bookFilter($event)" value="all">All</mat-checkbox>
+      </div>
+      <div class="col">
+        <mat-checkbox #checkboxMultiple (change)="bookFilter($event)" value="label">Label</mat-checkbox>
+      </div>
+      <div class="col">
+        <mat-checkbox #checkboxMultiple (change)="bookFilter($event)" value="concept">Concept</mat-checkbox>
+      </div>
+      <div class="col">
+        <mat-checkbox #checkboxMultiple (change)="bookFilter($event)" value="sentence">Sentence</mat-checkbox>
+      </div>
+      <div class="col">
+        <mat-checkbox #checkboxMultiple (change)="bookFilter($event)" value="fiction">Fiction</mat-checkbox>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="assignBookClass" class="col-12">
+    <div class="row">
+      <div class="col-12">
+        <div cdkDropList id="allBooksList" [cdkDropListData]="allBooks" [cdkDropListConnectedTo]="assignedClassArray"
+          class="allBooksList" (cdkDropListDropped)="drop($event)" cdkDropListOrientation="horizontal">
+          <div class="col-2" *ngFor="let book of allBooks" cdkDrag>
+            <div class="w-100 defaultBookList">
+              <img class="bookCoverImg" [src]="book.bookCoverImageUrl" [alt]="book.bookName"><span class="listBookName">{{book.bookName}}</span>
+            </div>
+            <img *cdkDragPreview class="bookCoverImg" [src]="book.bookCoverImageUrl" [alt]="book.bookName">
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div id="classesList" class="assignedBooksList">
+          <div *ngFor="let class of classes; let i = index" class="card">
+            <div class="card-header classListClass" (click)="bookAssignmentClass(class.classId, i)">
+              <a class="card-link" data-toggle="collapse" href="#class{{i}}">
+                <i class="fas fa-users"></i><span class="className">{{class.name}}</span>
+              </a>
+            </div>
+            <div id="class{{i}}" class="collapse" [class.show]="assignBookActiveId[0].id === class.classId" data-parent="#classesList">
+              <div class="card-body">
+                <div cdkDropList id="activeClass_{{class.classId}}" [cdkDropListData]="class['assignedBooks']"
+                  [cdkDropListConnectedTo]="['allBooksList']" class="w-100" (cdkDropListDropped)="drop($event, 'class', i)">
+                  <div class="col-12 defaultBookList" *ngFor="let book of class['assignedBooks']; let j = index;"
+                    cdkDrag cdkDragLockAxis="y">
+                    <i class="fas fa-book"></i><span class="listBookName">{{book.bookName}}</span>
+                    <span class="removeBook" (click)="removeBook(i, j)"><i class="fas fa-times"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div id="groupsList" class="assignedBooksList">
+          <div *ngFor="let group of classes[activeClassIndex]['groups']; let j = index" class="card">
+            <div class="card-header groupListGroup">
+              <a class="card-link" data-toggle="collapse" href="#group{{j}}">
+                <i class="fas fa-users"></i><span class="className">{{group.name}}</span>
+              </a>
+            </div>
+            <div id="group{{j}}" class="collapse" data-parent="#groupsList">
+              <div class="card-body">
+                <div cdkDropList id="activeClassGroup_{{group.groupId}}" [cdkDropListData]="group['assignedBooks']"
+                  [cdkDropListConnectedTo]="['allBooksList']" class="w-100" (cdkDropListDropped)="drop($event, 'group', j, activeClassIndex)">
+                  <div class="col-12 defaultBookList" *ngFor="let book of group['assignedBooks']; let k = index;"
+                    cdkDrag cdkDragLockAxis="y">
+                    <i class="fas fa-book"></i><span class="listBookName">{{book.bookName}}</span>
+                    <span class="removeBook"><i class="fas fa-times"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+          <div id="studentList" class="assignedBooksList">
+            <div *ngFor="let student of classes[activeClassIndex]['students']; let l = index" class="card">
+              <div class="card-header studentListStudent">
+                <a class="card-link" data-toggle="collapse" href="#student{{l}}">
+                  <img class="avatar" src="{{student.avatar}}">
+                  <span class="className">{{student.firstName}} {{student.lastName}}</span>
+                </a>
+              </div>
+              <div id="student{{l}}" class="collapse" data-parent="#studentList">
+                <div class="card-body">
+                  <div cdkDropList id="activeStudent_{{student.studentId}}" [cdkDropListData]="student['assignedBooks']"
+                    [cdkDropListConnectedTo]="['allBooksList']" class="w-100" (cdkDropListDropped)="drop($event, 'student', l, activeClassIndex)">
+                    <div class="col-12 defaultBookList" *ngFor="let book of student['assignedBooks']; let j = index;"
+                      cdkDrag cdkDragLockAxis="y">
+                      <i class="fas fa-book"></i><span class="listBookName">{{book.bookName}}</span>
+                      <span class="removeBook"><i class="fas fa-times"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div *ngIf="progressSpinner" class="w-100 d-flex justify-content-center progressSpinner">
+    <mat-spinner></mat-spinner>
+  </div>
+</div>

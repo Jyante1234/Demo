@@ -1,0 +1,204 @@
+.classManagementButtonDiv{
+    padding: 1rem 2rem;
+    .classManagementButtonDivIn{
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        .classManagementButton{
+            font-weight: 500;
+            border-radius: 8px;
+            padding: 0.25em 1em;
+            background: #ffffff;
+            color: #338BC7;
+            border: 1px solid #338BC7;
+            &:hover, &:focus{
+                color: #ffffff;
+                background: #338BC7;
+            }
+        }
+    }
+}
+.classManagementDiv{
+    margin: 1em;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 0 10px;
+}
+.classManagementHeader{
+    color: #ffffff;
+    font-size: 15px;
+    background-color: #338BC7;
+    tr{
+        th{
+            vertical-align: top;
+            &:last-child{
+                padding: 0;
+            }
+        }
+    }
+}
+.classManagementAction{
+    cursor: pointer;
+    color: #484545;
+}
+.classManagementTemplate{
+    display: contents;
+    tr{
+        td:first-child{
+            text-transform: capitalize;
+        }
+    }
+}
+.classManagementActions{
+    border: 0;
+}
+.classNameRow{
+    background-color: #FBC918;
+    .className{
+        font-weight: 500;
+    }
+}
+table{
+    thead{
+        tr{
+            th, td{
+                border: 0;
+            }
+        }
+    }
+    tbody{
+        tr{
+            th, td{
+                border: 0;
+            }
+        }
+    }
+}
+.table.classManagementTable{
+    margin-bottom: 0;
+    thead{
+        tr{
+            th{
+                border: 0;
+                border-right: 1px solid #999999;
+                text-align: center;
+                &:first-child{
+                    text-align: left;
+                }
+                &:last-child{
+                    border-right: 0;
+                }
+                &:nth-child(n+6){
+                    padding: 0.75rem 5px 5px;
+                }
+            }
+        }
+    }
+    tbody{
+        .classManagementTemplate{
+            tr{
+                td{
+                    border: 0;
+                    border-right: 1px solid #999999;
+                    padding: 0rem;
+                    text-align: center;
+                    &>div{
+                        padding: 1rem;
+                        &:nth-child(odd){
+                            background-color: #dfe6e9;
+                        }
+                        &:last-child{
+                            border-bottom: 5px solid #ffffff;
+                        }
+                    }
+                    &:first-child{
+                        padding: 1rem;
+                        vertical-align: top;
+                        text-align: left;
+                    }
+                    &:last-child{
+                        border-right: 0;
+                    }
+                    table{
+                        tbody{
+                            tr{                                   
+                                &:nth-child(odd){
+                                    background-color: #dfe6e9;
+                                }
+                                td{
+                                    &.classManagementActions{
+                                        border: 0;
+                                        padding: 1rem;
+                                        &:first-child{
+                                            text-align: center;
+                                        }
+                                    }
+                                    &:first-child{
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
+                        }
+                        &:last-child{
+                            border-bottom: 5px solid #ffffff;
+                        }
+                    }
+                }
+                &:nth-child(odd):not(.classNameRow){
+                    &>td{
+                        &:first-child{
+                            background-color: #dfe6e9;
+                        }
+                    }
+                }
+                &.classNameRow{
+                    td{
+                        vertical-align: middle;
+                        table{
+                            tbody{
+                                tr{
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                        table:nth-child(odd), table:nth-child(even){
+                            background-color: transparent;
+                            border: 0;
+                        }
+                    }
+                }
+                &:last-child{
+                    td{
+                        div:last-child{
+                            border: 0;
+                        }
+                        table:last-child{
+                            border: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.avatar{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    object-position: center;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+.optionTable{
+    tr{
+        td{
+            padding: 5px;
+        }
+    }
+}
+.bookStats{
+    display: block;
+    padding: 5px 0px;
+}

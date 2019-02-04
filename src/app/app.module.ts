@@ -1,24 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmployeeCountComponent } from './employee-count/employee-count.component';
-import { EmployeeListComponent } from './employee-list/employee-list.component';
-import { Angular2CsvModule } from 'angular2-csv';
-import { BookingComponent } from './booking/booking.component';
+import { ComponentsModule } from './components/components.module';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthModule } from './auth/auth.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
-    AppComponent,
-    EmployeeCountComponent,
-    EmployeeListComponent,
-    BookingComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
-    Angular2CsvModule
+    HttpClientModule,
+    ComponentsModule,
+    AuthModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

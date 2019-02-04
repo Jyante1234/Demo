@@ -1,0 +1,27 @@
+.flashCards{
+    .flashCard{
+        padding: 15px;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap;
+        .flashCardIn{
+            width: 100%;
+            cursor: pointer;
+           // background: #00b894;
+            .flashCardText{
+                padding: 15px;
+                color:  #00b894;
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+    }
+}
+.align-center {
+    text-align: center;
+    color:  #00b894;
+}
+.img-fluid {
+height: 144px;
+width: 155px;
+}

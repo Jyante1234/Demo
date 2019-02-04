@@ -1,0 +1,17 @@
+<div *ngIf="confirmationMessage" class="popupMessage">
+  <p class="text-center">Are you sure about this action?</p>
+  <div class="col-6 mx-auto">
+    <div class="popupMessage">
+      <div class="col-12">
+        <div class="row popupMessageConfirmation">
+          <button class="btn btn-success">Yes</button>
+          <button class="btn btn-danger">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-assign-book *ngIf="assignBook"></app-assign-book>
+<app-class-management *ngIf="manageClasses"></app-class-management>
+<app-add-students *ngIf="addStudents"></app-add-students>
+<app-alert *ngIf="alertShow"></app-alert>

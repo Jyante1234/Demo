@@ -1,0 +1,141 @@
+.addStudentsDiv{
+    padding: 2em 4em;
+    .example-container {
+        min-height: 30vh;
+        max-height: 60vh;
+        overflow: auto;
+        border: 2px solid rgba(0,0,0,0.3);
+        border-radius: 3px;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+    }
+    .addStudentsTable{
+        .addStudentsTableHead{
+            background-color: #FBC918;
+            th.mat-header-cell{
+                text-align: center;
+                font-size: 16px;
+                font-weight: 700;
+                color: #348DC9;
+                &:last-child{
+                    padding-right: 0;
+                }
+                ::ng-deep .mat-sort-header-container{
+                    justify-content: center;
+                }
+            }
+        }
+        .addStudentsTableBody{
+            .mat-cell{
+                text-align: center;
+                font-size: 16px;
+                &:last-child{
+                    padding-right: 0;
+                }
+            }
+        }
+        input{
+            border: 1px solid rgba($color: #000000, $alpha: 0.5);
+            border-radius: 3px;
+            padding: 5px 10px;
+            &:focus {
+                border-color: #338BC7;
+            }
+        }
+        ::ng-deep{
+            .mat-form-field-wrapper{
+                padding-bottom: 0;
+            }
+            .mat-form-field-flex{
+                align-items: center;
+            }
+            .mat-form-field-infix{
+                border: 0;
+                width: 150px;
+            }
+            .mat-form-field-underline {
+                display: none;
+            }
+        }
+    }
+    .addStudentsControlsDiv{
+        margin-top: 1em;
+        .addStudentsControlsDivIn{
+            .addStudentsControl{
+                font-weight: 500;
+                border-radius: 8px;
+                padding: 0.25em 1em;
+                background: #ffffff;
+                color: #338BC7;
+                border: 1px solid #338BC7;
+                margin-right: 1em;
+                &:hover, &:focus{
+                    color: #ffffff;
+                    background: #338BC7;
+                }
+                &:last-child{
+                    margin-right: 0em;
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        *{
+            font-size: 10px;
+        }
+    }
+}
+.avatarDiv{
+    position: absolute;
+    width: 500px;
+    right: 0;
+    top: 0px;
+    background: #ffffff;
+    box-shadow: 0px 0px 15px 0.1px rgba(0,0,0,0.3);
+    z-index: 1;
+    .avatarDivIn{
+        height: 100px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+    }
+}
+.avatar{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    object-position: center;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+.closeAvatars{
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #ffffff;
+    background-color: #338BC7;
+}

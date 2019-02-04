@@ -1,0 +1,149 @@
+* {
+    color: white;
+}
+*:focus {
+    outline: none;
+}
+button:focus, a,:focus img:focus, .helpIcon:focus, .logoutIcon:focus, .help:focus, .logout:focus, .navLink:focus {
+    outline: none !important;
+}
+img, a{
+    cursor: pointer;
+}
+.defaultHeader {
+    padding-bottom: 50px;
+}
+.navbar {
+    width: 100%;
+}
+.container .row, .headerLogo{
+    width: 100%
+}
+.navbar-brand {
+    color: white;
+    font-size: 14px;
+}
+.navbarTop {
+    background-color: #348DC9;
+    border-bottom: 2px solid #9b9ea0;
+    height: 66px;
+}
+.navbarBottom {
+    background-color: #CCE2F0;
+    border-bottom: 2px solid #9b9ea0;
+    height: 66px;
+}
+.headerLogo{
+    .headerLogoImg{
+    position: absolute;
+    top: 10px;
+    max-height: 112px;
+    z-index: 1;
+    }
+}
+.searchIcon {
+    visibility: hidden;
+}
+.elementaryIn{
+    justify-content: space-between;
+    margin-top: 6px;
+}
+.help-logout {
+    display: inline-flex;
+    justify-content: center;
+}
+.teacherRow {
+    text-align: center;
+    justify-content: center;
+}
+.teacherIcon, .helpIcon, .logoutIcon {
+    height: 36px;
+}
+.teacherIcon, .helpIcon {
+    margin-left: -10px;
+}
+.row .logout, .row .help {
+    padding-top: 0px;
+    text-align: center;
+}
+.helpIn  {
+    padding-right: 12px;
+    padding-left: 1px;
+}
+.logoutIn {
+    padding-left: 36px;
+}
+.logoutIcon, .logoutText {
+    padding-left: 19px;
+    cursor: pointer;
+}
+.navItems {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.navItemsIn img.navImages {
+    text-align: center;
+}
+.navItems div.items {
+    background: #EF422F;
+    position: relative;
+    top: 18px;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    cursor: pointer;
+}
+.navItems .navItemsIn .navImages {
+    height: 56px;
+    position: relative;
+    top: 13px;
+    left: 47px;
+    cursor: pointer;
+}
+.items div.navLink{
+    text-align: center;
+}
+.headerIn b {
+    margin-left: -9px;
+}
+.navLink.active {
+    background-color: #348DC9;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+}
+@media screen and (max-width: 900px) and (min-width: 320px) {
+    .navItems .navItemsIn .navImages {
+        position: relative;
+        top: 12px;
+        left: 0px;
+    }
+    .navItems div.items {
+        font-size: 12px;
+        position: relative;
+        top: 15px;
+        left: -16px;
+        border-bottom-right-radius: 1em;
+        border-bottom-left-radius: 1em;
+        cursor: pointer;
+    }
+    .logoutIcon, .logoutText {
+        padding-left: 4px;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 900px) {
+    .navItems .navItemsIn .navImages {
+        position: relative;
+        top: 12px;
+        left: 34px;
+    }
+}
+@media screen and (max-width: 425px) and (min-width: 320px) {
+    .headerLogo .headerLogoImg {
+        position: absolute;
+        top: 53px;
+        left: -8px;
+        max-height: 70px;
+        z-index: 1;
+    }
+}

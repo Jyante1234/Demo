@@ -1,0 +1,57 @@
+.gamesMockData {
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    .gamesData {
+        width: 220px;
+        height: 190px;
+        padding: 9px 8px 10px 40px;
+        .gamesDataIn {
+            cursor: pointer;
+        }
+    }
+}
+.gamesDataIn {
+    border: 1px solid #348DC9;
+    height: 175px;
+    position: relative;
+    border-radius: 5px;
+    .coverImage {
+        border-radius: 5px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        height: 70%;
+        width: 100%;
+    }
+    .gameTitleDiv {
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .gameTitle {
+            color: black;
+            font-weight: 700;
+            font-size: 14;
+            padding-top: 8px;
+        }
+    }
+    
+  }
+.coverImage {
+    position: relative;
+    
+  }
+  .coverImage {
+    position: relative;
+    text-align: center;
+  }
+.centered {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.centeredIcon {
+    font-size: 35px;
+}
+ 
